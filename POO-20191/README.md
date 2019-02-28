@@ -1,1 +1,0 @@
-list simple of exercises for the discipline POO in JAVA- (Object-oriented programming).
