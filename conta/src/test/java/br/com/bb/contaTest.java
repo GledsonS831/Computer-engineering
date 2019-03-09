@@ -8,7 +8,9 @@ import org.junit.Assert;
 public class contaTest {
 
     @Test
+
     public void testSetitular(){
+
         conta conta = new conta();
         conta.setTitular("Ana");
         Assert.assertEquals("Ana", conta.getTitular());
