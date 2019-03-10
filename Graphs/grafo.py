@@ -218,9 +218,31 @@ class Grafo:
         while True:
             for caminho in self.A.values():
                 pass
-
-
-
+    def ha_ciclo(self):
+        count_i = -1
+        count_j = -1
+        for i in self.A.values():
+            count_i += 1
+            #criando lista para  dar inicio a busca de caminhos
+            temp = self.A.values()
+            #criando aresta
+            aresta = i.split('-')
+            comprimento = 0
+            ponto = aresta[0]
+            ponto2 = aresta[1]
+            for j in temp:
+                count_j += 1
+                #arestas nao podem ser iguais
+                aresta_aux = j.split('-')
+                if comprimento == 3:
+                    return True
+                if ponto == aresta_aux[1]:
+                    ponto = aresta_aux[1]
+                    comprimento += 1
+                elif ponto == aresta_aux[0]:
+                    ponto = aresta_aux[0]
+                    comprimento += 1
+  
 
 
     def __str__(self):
