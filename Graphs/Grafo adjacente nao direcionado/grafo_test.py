@@ -116,8 +116,8 @@ class TestGrafo(unittest.TestCase):
         #{'a1': 'J-C', 'a2': 'C-E', 'a3': 'C-E', 'a4': 'C-P', 'a5': 'C-P', 'a6': 'C-M', 'a7': 'C-T', 'a8': 'M-T',
         # 'a9': 'T-Z'}
         self.assertEqual(set(self.g_p.arestas_sobre_vertice('J')), set(['J-C']))
-        self.assertEqual(set(self.g_p.arestas_sobre_vertice('C')), set(['J-C', 'C-E', 'C-E', 'C-P', 'C-P', 'C-M', 'C-T']))
-        self.assertEqual(set(self.g_p.arestas_sobre_vertice('M')), set(['C-M', 'M-T']))
+        self.assertEqual(set(self.g_p.arestas_sobre_vertice('C')), set(['C-J', 'C-E', 'C-E', 'C-P', 'C-P', 'C-M', 'C-T']))
+        self.assertEqual(set(self.g_p.arestas_sobre_vertice('M')), set(['M-C', 'M-T']))
 
     def test_eh_completo(self):
         self.assertFalse(self.g_p.eh_completo())

@@ -221,8 +221,13 @@ class Grafo:
             raise ArestaInvalidaException('A aresta {} é inválida'.format(a))
 
     def vertices_nao_adjacentes(self):
-        pass
-
+        not_adj = []
+        for i in range(len(self.N)):
+            for j in range(len(self.N)):
+                if self.M[i][j] == 0:
+                    aresta = self.N[i]+"-"+self.N[j]
+                    not_adj.append(aresta)
+        return not_adj
 
     def ha_laco(self):
         for i in range(len(self.M)):
@@ -237,6 +242,23 @@ class Grafo:
                 if self.M[i][j] != '-' and self.M[i][j] > 1:
                     return True
         return False
+
+    def arestas_sobre_vertice(self, vertice):
+        sobre_vertice = []
+        for i in range(len(self.N)):
+                for j in range(len(self.N)):
+                    if self.N[i] == vertice and self.M[i][j] != '-'and i != j and self.M[i][j] > 0:
+                        aresta = vertice+"-"+self.N[j]
+                        sobre_vertice.append(aresta)
+                    elif self.N[j] == vertice and self.M[i][j] != '-' and i != j and self.M[i][j] > 0:
+                        aresta = vertice+'-'+self.N[i]
+                        sobre_vertice.append(aresta)
+
+                    elif self.N[i] == vertice and self.M[i][j] != '-' and i == j and self.M[i][j] > 0:
+                        aresta = vertice + '-' + self.N[i]
+                        sobre_vertice.append(aresta)
+
+        return sobre_vertice
     def eh_completo(self):
         completo = True
         for i in range(len(self.M)):

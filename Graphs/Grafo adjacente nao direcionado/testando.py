@@ -1,12 +1,12 @@
 from grafo_adj_nao_dir import Grafo
-
-g = Grafo(['J', 'C', 'E', 'P'])
+#testar fora das classes
+g = Grafo(['J', 'C', 'E', 'P', 'M', 'T', 'Z'])
 g.adicionaAresta('J-C')
-g.adicionaAresta('J-E')
-g.adicionaAresta('J-P')
 g.adicionaAresta('C-E')
 g.adicionaAresta('C-P')
-g.adicionaAresta('E-P')
-print(g)
+g.adicionaAresta('C-M')
+g.adicionaAresta('C-T')
+g.adicionaAresta('M-T')
+g.adicionaAresta('T-Z')
+print(g.arestas_sobre_vertice("C"))
 
-g.vertices_nao_adjacentes()
