@@ -3,10 +3,10 @@ package br.com.bb;
 public class conta
 {
     //area de atributos
-    int num;
-    String titular;
-    double saldo;
-    double quantia;
+    private int num;
+    private String titular;
+    private double saldo;
+    private double quantia;
 
     // area de construtores
     public conta() {
@@ -54,9 +54,6 @@ public class conta
         return saldo;
     }
 
-    public void ToString(){
-
-    }
 
 
 
