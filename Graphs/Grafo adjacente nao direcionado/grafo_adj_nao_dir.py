@@ -245,18 +245,38 @@ class Grafo:
 
     def arestas_sobre_vertice(self, vertice):
         sobre_vertice = []
-        for i in range(len(self.N)):
+        '''for i in range(len(self.N)):
                 for j in range(len(self.N)):
                     if self.N[i] == vertice and self.M[i][j] != '-'and i != j and self.M[i][j] > 0:
                         aresta = vertice+"-"+self.N[j]
                         sobre_vertice.append(aresta)
-                    elif self.N[j] == vertice and self.M[i][j] != '-' and i != j and self.M[i][j] > 0:
+
+                    if self.N[j] == vertice and self.M[i][j] != '-' and i != j and self.M[i][j] > 0:
                         aresta = vertice+'-'+self.N[i]
                         sobre_vertice.append(aresta)
 
                     elif self.N[i] == vertice and self.M[i][j] != '-' and i == j and self.M[i][j] > 0:
                         aresta = vertice + '-' + self.N[i]
-                        sobre_vertice.append(aresta)
+                        sobre_vertice.append(aresta)'''
+
+        index = 0
+        for i in range(len(self.N)):
+            if self.N[i] == vertice:
+                index = i
+
+        for i in range(len(self.N)):
+            if self.M[index][i] != '-' and self.M[index][i] > 0:
+                for j in range(self.M[index][i]):
+                    aresta = vertice+"-"+self.N[i]
+                    sobre_vertice.append(aresta)
+
+
+            if self.M[i][index] != '-' and self.M[i][index] > 0:
+                for j in range(self.M[i][index]):
+                    aresta = vertice + "-" + self.N[i]
+                    sobre_vertice.append(aresta)
+
+
 
         return sobre_vertice
     def eh_completo(self):
