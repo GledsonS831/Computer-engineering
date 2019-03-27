@@ -7,13 +7,11 @@ g.adicionaAresta('a-h')
 g.adicionaAresta('a-h')
 g.adicionaAresta('b-c')
 g.adicionaAresta('b-g')
-g.adicionaAresta('b-f')
+
 g.adicionaAresta('d-e')
 g.adicionaAresta('c-g')
 g.adicionaAresta('a-g')
-
-
-
-g.eh_conexo()
-
-
+lista = []
+print(g)
+g.comprimento_n(g, 0, 7, lista)
+print(lista)
