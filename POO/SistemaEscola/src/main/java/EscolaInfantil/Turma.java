@@ -60,11 +60,12 @@ public class Turma {
         System.out.println(this.ListaMateriais);
     }
     public void imprimeAlunos(){
+        System.out.println("Lista de alunos nesta turma:");
         for(Aluno al: AlunosCadastrados){
             System.out.println(al.getNome());
         }
     }
     public void imprimeProfessor(){
-        System.out.printf("O professor(a) da turma é %s: ",this.professor.getNome());
+        System.out.printf("O professor(a) da turma %s sala %d é %s: ",this.getTipo(), this.getSala(), this.professor.getNome());
     }
 }
