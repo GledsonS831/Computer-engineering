@@ -1,9 +1,5 @@
 package EscolaInfantil;
 
-/**
- * Hello world!
- *
- */
 public class Professor
 {
     private String Nome;
@@ -11,13 +7,18 @@ public class Professor
     private String GrauInstrução;
     private double Salario;
 
-    public Professor(String nome, int matricula, String GrauInstrução, double salario){
+    public void setNome(String nome){
         this.Nome = nome;
-        this.Matricula = matricula;
-        this.GrauInstrução = GrauInstrução;
-        this.Salario = salario;
     }
-
+    public void setMatricula(int matricula){
+        this.Matricula = matricula;
+    }
+    public void setGrauInstrução(String grau){
+        this.GrauInstrução = grau;
+    }
+    public  void setSalario(double valor){
+        this.Salario = valor;
+    }
     public String getNome(){
         return this.Nome;
     }

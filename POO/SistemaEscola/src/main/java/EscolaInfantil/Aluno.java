@@ -7,11 +7,20 @@ public class Aluno {
     private String NomeMae;
     private String MaterialEntregar;
 
-    public Aluno(String nome, int matricula, String dataNasciento, String mae){
+    public void setNome(String nome){
         this.Nome = nome;
+    }
+    public void setMatricula(int matricula){
         this.Matricula = matricula;
-        this.DataNascimento = dataNasciento;
-        this.NomeMae = mae;
+    }
+    public  void setDataNascimento(String data){
+        this.DataNascimento = data;
+    }
+    public void setNomeMae(String nome){
+        this.NomeMae = nome;
+    }
+    public void setMaterialEntregar(String material){
+        this.MaterialEntregar = material;
     }
 
     public String getNome(){
