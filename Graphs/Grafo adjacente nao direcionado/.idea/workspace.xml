@@ -17,26 +17,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testando.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grafo_adj_nao_dir.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="310" column="51" lean-forward="true" selection-start-line="310" selection-start-column="51" selection-end-line="310" selection-end-column="51" />
+            <state relative-caret-position="272">
+              <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grafo_adj_nao_dir.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1525">
+              <caret line="298" column="19" selection-start-line="298" selection-start-column="19" selection-end-line="298" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grafo_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-892">
-              <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="17" selection-end-column="38" />
+            <state relative-caret-position="1309">
+              <caret line="77" selection-start-line="77" selection-end-line="77" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -71,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="713" />
     <option name="width" value="734" />
     <option name="height" value="867" />
@@ -81,23 +81,10 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Grafo adjacente nao direcionado" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Grafo adjacente nao direcionado" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/grafo_test.py" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -111,26 +98,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.testando">
-    <configuration name="testando" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python tests.Unittests for grafo_test.TestGrafo.test_ha_laco">
+    <configuration name="Unittests for grafo_test.TestGrafo.test_arestas_ha_paralelas" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Grafo adjacente nao direcionado" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testando.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;grafo_test.TestGrafo.test_arestas_ha_paralelas&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Unittests for grafo_test.TestGrafo.test_arestas_sobre_vertice" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -161,6 +141,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for grafo_test.TestGrafo.test_grau" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Grafo adjacente nao direcionado" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;grafo_test.TestGrafo.test_grau&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for grafo_test.TestGrafo.test_ha_laco" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Grafo adjacente nao direcionado" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -175,27 +169,13 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for grafo_test.TestGrafo.test_vertices_nao_adjacentes" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="Grafo adjacente nao direcionado" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;grafo_test.TestGrafo.test_vertices_nao_adjacentes&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.testando" />
-        <item itemvalue="Python tests.Unittests for grafo_test.TestGrafo.test_arestas_sobre_vertice" />
-        <item itemvalue="Python tests.Unittests for grafo_test.TestGrafo.test_vertices_nao_adjacentes" />
-        <item itemvalue="Python tests.Unittests for grafo_test.TestGrafo.test_eh_completo" />
         <item itemvalue="Python tests.Unittests for grafo_test.TestGrafo.test_ha_laco" />
+        <item itemvalue="Python tests.Unittests for grafo_test.TestGrafo.test_eh_completo" />
+        <item itemvalue="Python tests.Unittests for grafo_test.TestGrafo.test_arestas_sobre_vertice" />
+        <item itemvalue="Python tests.Unittests for grafo_test.TestGrafo.test_arestas_ha_paralelas" />
+        <item itemvalue="Python tests.Unittests for grafo_test.TestGrafo.test_grau" />
       </list>
     </recent_temporary>
   </component>
@@ -213,27 +193,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_arestas_sobre_vertice - 2019.03.14 at 16h 22m 14s.xml">
-      <configuration name="Unittests for grafo_test.TestGrafo.test_arestas_sobre_vertice" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_arestas_sobre_vertice - 2019.03.14 at 16h 24m 02s.xml">
-      <configuration name="Unittests for grafo_test.TestGrafo.test_arestas_sobre_vertice" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_arestas_sobre_vertice - 2019.03.14 at 16h 25m 33s.xml">
-      <configuration name="Unittests for grafo_test.TestGrafo.test_arestas_sobre_vertice" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_arestas_sobre_vertice - 2019.03.14 at 16h 27m 39s.xml">
-      <configuration name="Unittests for grafo_test.TestGrafo.test_arestas_sobre_vertice" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_arestas_sobre_vertice - 2019.03.14 at 16h 28m 22s.xml">
-      <configuration name="Unittests for grafo_test.TestGrafo.test_arestas_sobre_vertice" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_arestas_sobre_vertice - 2019.03.14 at 16h 28m 41s.xml">
-      <configuration name="Unittests for grafo_test.TestGrafo.test_arestas_sobre_vertice" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_arestas_sobre_vertice - 2019.03.14 at 16h 28m 54s.xml">
-      <configuration name="Unittests for grafo_test.TestGrafo.test_arestas_sobre_vertice" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_grafo_test_TestGrafo_test_arestas_sobre_vertice - 2019.03.16 at 22h 24m 06s.xml">
       <configuration name="Unittests for grafo_test.TestGrafo.test_arestas_sobre_vertice" configurationId="tests" />
     </history-entry>
@@ -243,17 +202,37 @@
     <history-entry file="Unittests_for_grafo_test_TestGrafo_test_arestas_sobre_vertice - 2019.03.17 at 23h 18m 08s.xml">
       <configuration name="Unittests for grafo_test.TestGrafo.test_arestas_sobre_vertice" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_ha_laco - 2019.03.25 at 22h 44m 36s.xml">
+      <configuration name="Unittests for grafo_test.TestGrafo.test_ha_laco" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_vertices_nao_adjacentes - 2019.03.25 at 22h 44m 40s.xml">
+      <configuration name="Unittests for grafo_test.TestGrafo.test_vertices_nao_adjacentes" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_grau - 2019.03.25 at 22h 44m 42s.xml">
+      <configuration name="Unittests for grafo_test.TestGrafo.test_grau" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_arestas_ha_paralelas - 2019.03.25 at 22h 44m 47s.xml">
+      <configuration name="Unittests for grafo_test.TestGrafo.test_arestas_ha_paralelas" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_arestas_sobre_vertice - 2019.03.25 at 22h 44m 51s.xml">
+      <configuration name="Unittests for grafo_test.TestGrafo.test_arestas_sobre_vertice" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_eh_completo - 2019.03.25 at 22h 44m 54s.xml">
+      <configuration name="Unittests for grafo_test.TestGrafo.test_eh_completo" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_ha_laco - 2019.03.25 at 22h 45m 37s.xml">
+      <configuration name="Unittests for grafo_test.TestGrafo.test_ha_laco" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="713" y="0" width="734" height="867" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25574714" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22479564" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22476447" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -270,25 +249,25 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/testando.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grafo_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-892">
-          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="17" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grafo_adj_nao_dir.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="310" column="51" lean-forward="true" selection-start-line="310" selection-start-column="51" selection-end-line="310" selection-end-column="51" />
+        <state relative-caret-position="1525">
+          <caret line="298" column="19" selection-start-line="298" selection-start-column="19" selection-end-line="298" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grafo_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

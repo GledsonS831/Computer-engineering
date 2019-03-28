@@ -300,72 +300,9 @@ class Grafo:
                         soma += self.M[i][j]
         return soma
 
-    def eh_conexo(self):
-        '''começando a percorrer a partir de um vertice'''
-        tamanhos_caminhos = []
-        for i in range(len(self.N)):
-            matriz_aux = []
-            for a in range(len(self.N)):
-                matriz_aux.append([])
-                for b in range(len(self.N)):
-                    matriz_aux[a][b] = self.M[a][b]
-            '''varievel para percorrer'''
-            caminho_vertice = 0;
-
-            '''quebra o laço quando a linha e coluna do vertice i for toda igual a zero'''
-            count = 0
-            caminho = []
-            encontrou = 0
-            while True:
-                '''verificando linha e coluna de vertice atual'''
-                count_lc = 0
-                for j in range(len(matriz_aux)):
-                    if matriz_aux[caminho_vertice][j] != '-' and matriz_aux[caminho_vertice][j] > 0:
-                        count_lc += matriz_aux[caminho_vertice][j]
-                    if matriz_aux[j][caminho_vertice] != '-' and matriz_aux[j][caminho_vertice] > 0:
-                        count_lc += matriz_aux[j][caminho_vertice]
-                '''se linha = coluna = 0, entao voltamos ao ponto inicial e verificamos novamente'''
-                if count_lc == 0:
-                    caminho_vertice = i
-                for j in range(len(matriz_aux)):
-                    '''se encontrou linha maior que zero'''
-                    if matriz_aux[caminho_vertice][j] != '-' and  matriz_aux[caminho_vertice][j] > 0:
-                        encontrou = 1
-                    '''adicionar uma aresta na lista de caminho possivel e remove pois ja verificou'''
-                    if encontrou:
-                        aresta = self.N[caminho_vertice] + '-' + self.N[j]
-                        caminho.append(aresta)
-                        matriz_aux[caminho_vertice][j] = 0
-                        caminho_vertice = self.N.index(self.N[j])
-                        break
-                '''se encontrou continue procurando'''
-                if encontrou:
-                    encontrou = 0
-                    continue
-
-                '''se nao encontrou trocamos a linha com a coluna'''
-                if not encontrou:
-                    for k in range(len(matriz_aux)):
-                        if matriz_aux[k][caminho_vertice] != '-' and matriz_aux[k][caminho_vertice] > 0:
-                            aresta = self.N[caminho_vertice] + '-' + self.N[k]
-                            caminho.append(aresta)
-                            matriz_aux[k][caminho_vertice] = 0
-                            '''encontra o index na matriz que contem um num maior q zero'''
-                            caminho_vertice = self.N.index(self.N[k])
 
 
-                '''se linha e coluna atual for tudo 0 break'''
-                count_i = 0
-                for j in range(len(matriz_aux)):
-                    if matriz_aux[i][j] != '-' and matriz_aux[i][j] > 0:
-                        count_i += matriz_aux[i][j]
-                    if matriz_aux[j][i] != '-' and matriz_aux[j][i] > 0:
-                        count_i += matriz_aux[j][i]
 
-                if count_i == 0:
-                    break
-            if i == 2:
-                break
 
     def __str__(self):
         '''
