@@ -203,6 +203,28 @@ class Grafo:
         else:
             raise ArestaInvalidaException('A aresta {} é inválida'.format(a))
 
+    def eh_conexo(self):
+        lista1 = [0]
+        lista2 = [0]
+        aux = 0
+
+        while len(lista1) != len(self.N):
+            for x in range(aux, len(lista1)):
+                for y in range(lista1[x] + 1, len(self.N)):
+
+                    if y in lista1:
+                        continue
+                    elif self.M[lista1[x]][y] > 0:
+
+                        lista1.append(y)
+            if lista1 == lista2:
+                
+                return False
+
+            aux += len(lista1) - len(lista2)
+            lista2 = lista1.copy()
+        return True
+
     def caminho_eleriano(self):
         pass
 
