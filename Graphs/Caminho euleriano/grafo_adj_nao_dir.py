@@ -211,14 +211,14 @@ class Grafo:
         while len(lista1) != len(self.N):
             for x in range(aux, len(lista1)):
                 for y in range(lista1[x] + 1, len(self.N)):
-
                     if y in lista1:
                         continue
                     elif self.M[lista1[x]][y] > 0:
-
                         lista1.append(y)
+
+                        print(y)
             if lista1 == lista2:
-                
+                print(lista1)
                 return False
 
             aux += len(lista1) - len(lista2)
@@ -226,6 +226,7 @@ class Grafo:
         return True
 
     def caminho_eleriano(self):
+
         pass
 
     def __str__(self):
