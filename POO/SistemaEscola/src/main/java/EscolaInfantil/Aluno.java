@@ -6,6 +6,17 @@ public class Aluno {
     private String DataNascimento;
     private String NomeMae;
     private String MaterialEntregar;
+    public static int totalAlunos;
+
+    public Aluno(){
+        Aluno.totalAlunos = totalAlunos + 1;
+    }
+
+    public void getTotalAlunos(){
+        System.out.println("qnt");
+        System.out.println(Aluno.totalAlunos);
+
+    }
 
     public void setNome(String nome){
         this.Nome = nome;
