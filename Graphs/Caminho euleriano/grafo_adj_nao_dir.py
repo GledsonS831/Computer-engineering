@@ -227,23 +227,22 @@ class Grafo:
                     if self.M[i][j] != "-":
                         soma += self.M[i][j]
         return soma
+    def config(self, x):
+        conf = 0
+        for j in range(0, x):
+            conf += self.M[j][x]
+        if conf == 0:
+            return True
+        return False
+
     def eh_conexo(self):
-        lista1 = [0]
-        lista2 = [0]
-        aux = 0
-
-        while len(lista1) != len(self.N):
-            for x in range(aux, len(lista1)):
-                for y in range(lista1[x] + 1, len(self.N)):
-                    if y in lista1:
-                        continue
-                    elif self.M[lista1[x]][y] > 0:
-                        lista1.append(y)
-            if lista1 == lista2:
+        print(self)
+        for x in range(0, len(self.N) - 1):
+            conf = 0
+            for y in range(x+1, len(self.N)):
+                conf += self.M[x][y]
+            if conf == 0 and self.config(x):
                 return False
-
-            aux += len(lista1) - len(lista2)
-            lista2 = lista1.copy()
         return True
 
     def caminho_eleriano(self):
