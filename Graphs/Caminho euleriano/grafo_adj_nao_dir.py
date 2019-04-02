@@ -203,6 +203,30 @@ class Grafo:
         else:
             raise ArestaInvalidaException('A aresta {} é inválida'.format(a))
 
+    '''def eh_conexo(self):
+        contem = 0
+        for i in range(len(self.N)):
+            for j in range(len(self.N)):
+                if(self.M[i][j] != '-' and self.M[i][j] > 0 and contem == 0):
+                    contem = 1
+            if contem == 0:
+                for j in range(len(self.N)):
+                    if(self.M[j][i] != '-' and self.M[j][i] > 0):
+                        contem = 1
+            if contem == 0:
+                return False
+        return True'''
+
+    def grau(self, vertice):
+        index = 1
+        soma = 0
+        soma_diagonal = 0
+        for i in range(len(self.N)):
+            for j in range(len(self.N)):
+                if self.N[i] == vertice or self.N[j] == vertice and i != j:
+                    if self.M[i][j] != "-":
+                        soma += self.M[i][j]
+        return soma
     def eh_conexo(self):
         lista1 = [0]
         lista2 = [0]
@@ -215,10 +239,7 @@ class Grafo:
                         continue
                     elif self.M[lista1[x]][y] > 0:
                         lista1.append(y)
-
-                        print(y)
             if lista1 == lista2:
-                print(lista1)
                 return False
 
             aux += len(lista1) - len(lista2)
@@ -226,8 +247,57 @@ class Grafo:
         return True
 
     def caminho_eleriano(self):
+        vertice_impar = []
+        contador_aresta = 0
+        for i in range(len(self.N)):
+            contador_v = 0
+            for j in range(len(self.N)):
+                if self.M[i][j] != '-' and i != j:
+                    contador_v += self.M[i][j]
+                    contador_aresta += self.M[i][j]
+            for j in range(len(self.N)):
+                if self.M[j][i] != '-' and i != j:
+                    contador_v += self.M[j][i]
+            if contador_v % 2 != 0:
+                vertice_impar.append(i)
+        grau_aresta_impar = self.grau(self.N[vertice_impar[1]])
+        print()
+        if len(vertice_impar) == 2:
+            vertice_atual = vertice_impar[0]
+            cont = 0
+            cont_aresta_impar = 0
+            while True:
+                verifica_linha = 0
+                for i in range(len(self.N)):
+                    if self.M[vertice_atual][i] != '-' and self.M[vertice_atual][i] > 0:
+                        self.M[vertice_atual][i] -= 1
+                        vertice_atual = i
+                        print(self.N[i])
+                        vertice_atual = i
 
-        pass
+                        verifica_linha = 1
+                        break
+                if verifica_linha == 0:
+                    for i in range(len(self.N)):
+                        if self.M[i][vertice_atual] != '-' and self.M[i][vertice_atual] > 0:
+                            if self.N[vertice_atual] == self.N[vertice_impar[1]]:
+                                cont_aresta_impar += 2
+                            if self.N[vertice_atual] == self.N[
+                                vertice_impar[1]] and cont_aresta_impar == grau_aresta_impar - 1:
+                                vertice_atual += 1
+                                verifica_linha = 1
+                                break
+                            self.M[i][vertice_atual] -= 1
+                            vertice_atual = i
+                            print(self.N[i])
+
+                            verifica_linha = 1
+                            break
+
+
+                cont += 1
+                if cont == 11:
+                    break
 
     def __str__(self):
         '''
