@@ -4,7 +4,12 @@
     <bookmark url="file://$PROJECT_DIR$/testando.py" line="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6527528-b5a9-4cc8-8cf1-a081a04be8ef" name="Default Changelist" comment="" />
+    <list default="true" id="f6527528-b5a9-4cc8-8cf1-a081a04be8ef" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grafo_adj_nao_dir.py" beforeDir="false" afterPath="$PROJECT_DIR$/grafo_adj_nao_dir.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testando.py" beforeDir="false" afterPath="$PROJECT_DIR$/testando.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/conta/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/conta/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/euler_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="504">
+              <caret line="90" column="11" lean-forward="true" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -37,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grafo_adj_nao_dir.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="245" column="19" selection-start-line="245" selection-start-column="19" selection-end-line="245" selection-end-column="19" />
+            <state relative-caret-position="395">
+              <caret line="293" column="50" selection-start-line="293" selection-start-column="50" selection-end-line="293" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -74,7 +79,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -86,6 +90,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -103,7 +108,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.testando">
     <configuration name="testando" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Caminho euleriano" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -125,9 +130,39 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for euler_test.TestEuler" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Caminho euleriano" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;euler_test.TestEuler&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for euler_test.TestEuler.test_caminho_euleriano" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Caminho euleriano" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;euler_test.TestEuler.test_caminho_euleriano&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.testando" />
+        <item itemvalue="Python tests.Unittests for euler_test.TestEuler.test_caminho_euleriano" />
+        <item itemvalue="Python tests.Unittests for euler_test.TestEuler" />
       </list>
     </recent_temporary>
   </component>
@@ -144,15 +179,48 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_euler_test_TestEuler_test_caminho_euleriano - 2019.04.05 at 17h 46m 44s.xml">
+      <configuration name="Unittests for euler_test.TestEuler.test_caminho_euleriano" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_euler_test_TestEuler_test_caminho_euleriano - 2019.04.05 at 17h 55m 04s.xml">
+      <configuration name="Unittests for euler_test.TestEuler.test_caminho_euleriano" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_euler_test_TestEuler_test_caminho_euleriano - 2019.04.05 at 19h 32m 11s.xml">
+      <configuration name="Unittests for euler_test.TestEuler.test_caminho_euleriano" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_euler_test_TestEuler_test_caminho_euleriano - 2019.04.05 at 19h 32m 21s.xml">
+      <configuration name="Unittests for euler_test.TestEuler.test_caminho_euleriano" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_euler_test_TestEuler_test_caminho_euleriano - 2019.04.05 at 19h 39m 20s.xml">
+      <configuration name="Unittests for euler_test.TestEuler.test_caminho_euleriano" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_euler_test_TestEuler_test_caminho_euleriano - 2019.04.05 at 19h 42m 09s.xml">
+      <configuration name="Unittests for euler_test.TestEuler.test_caminho_euleriano" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_euler_test_TestEuler_test_caminho_euleriano - 2019.04.05 at 20h 09m 06s.xml">
+      <configuration name="Unittests for euler_test.TestEuler.test_caminho_euleriano" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_euler_test_TestEuler_test_caminho_euleriano - 2019.04.05 at 20h 09m 53s.xml">
+      <configuration name="Unittests for euler_test.TestEuler.test_caminho_euleriano" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_euler_test_TestEuler_test_caminho_euleriano - 2019.04.05 at 20h 12m 46s.xml">
+      <configuration name="Unittests for euler_test.TestEuler.test_caminho_euleriano" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_euler_test_TestEuler_test_caminho_euleriano - 2019.04.05 at 20h 15m 45s.xml">
+      <configuration name="Unittests for euler_test.TestEuler.test_caminho_euleriano" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36069986" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3795424" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -169,15 +237,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/grafo_adj_nao_dir.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="245" column="19" selection-start-line="245" selection-start-column="19" selection-end-line="245" selection-end-column="19" />
+        <state relative-caret-position="395">
+          <caret line="293" column="50" selection-start-line="293" selection-start-column="50" selection-end-line="293" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/euler_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="504">
+          <caret line="90" column="11" lean-forward="true" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

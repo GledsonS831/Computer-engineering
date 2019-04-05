@@ -245,7 +245,7 @@ class Grafo:
                 return False
         return True
 
-    def caminho_eleriano(self):
+    def caminho_euleriano(self):
         vertice_impar = []
         contador_aresta = 0
         for i in range(len(self.N)):
@@ -259,45 +259,95 @@ class Grafo:
                     contador_v += self.M[j][i]
             if contador_v % 2 != 0:
                 vertice_impar.append(i)
-        grau_aresta_impar = self.grau(self.N[vertice_impar[1]])
-        print()
+
+        ##print(vertice_impar)
+
         if len(vertice_impar) == 2:
+            print("impares")
+            caminho = []
             vertice_atual = vertice_impar[0]
+
             cont = 0
-            cont_aresta_impar = 0
+            cont_aresta_impar2 = self.grau(self.N[vertice_impar[1]])
+            caminho.append(self.N[vertice_impar[0]])
+            ##print(cont_aresta_impar2)
+            verifica_linha = 0
             while True:
                 verifica_linha = 0
                 for i in range(len(self.N)):
-                    if self.M[vertice_atual][i] != '-' and self.M[vertice_atual][i] > 0:
+                    if i != vertice_atual and self.M[vertice_atual][i] != '-' and self.M[vertice_atual][i] > 0:
+                        if cont_aresta_impar2 == 1 and self.N[i] == self.N[vertice_impar[1]]:
+                            cont_aresta_impar2 = 0
+                            verifica_linha = 1
+                            continue
+                        if self.N[i] == self.N[vertice_impar[1]] or self.N[vertice_atual] == self.N[vertice_impar[1]] and cont_aresta_impar2 > 1:
+                            cont_aresta_impar2 -= 1
+
                         self.M[vertice_atual][i] -= 1
                         vertice_atual = i
-                        print(self.N[i])
+                        caminho.append(self.N[i])
+
+                        verifica_linha = 1
+                        break
+                if verifica_linha == 0:
+                    for i in range(len(self.N)):
+                        if i != vertice_atual and self.M[i][vertice_atual] != '-' and self.M[i][vertice_atual] > 0:
+                            self.M[i][vertice_atual] -= 1
+                            vertice_atual = i
+                            caminho.append(self.N[i])
+
+                            verifica_linha = 1
+                            break
+                if verifica_linha == 0:
+                    for i in range(len(caminho)):
+                        if i < len(caminho)-1:
+                            print(caminho[i]+'-',end='')
+                        else:
+                            print(caminho[i])
+                    return True
+                    break
+        elif len(vertice_impar) == 0:
+            print("nenhum impar")
+            caminho = []
+            vertice_atual = 0
+
+            cont = 0
+            ##cont_aresta_impar = self.grau(self.N[vertice_impar[1]])
+            ##print(cont_aresta_impar)
+            verifica_linha = 0
+            print("caminho euleriano formado:")
+            caminho.append(self.N[0])
+            while True:
+                verifica_linha = 0
+                for i in range(len(self.N)):
+                    if i != vertice_atual and self.M[vertice_atual][i] != '-' and self.M[vertice_atual][i] > 0:
+                        self.M[vertice_atual][i] -= 1
+                        caminho.append(self.N[i])
+
                         vertice_atual = i
 
                         verifica_linha = 1
                         break
                 if verifica_linha == 0:
                     for i in range(len(self.N)):
-                        if self.M[i][vertice_atual] != '-' and self.M[i][vertice_atual] > 0:
-                            if self.N[vertice_atual] == self.N[vertice_impar[1]]:
-                                cont_aresta_impar += 2
-                            if self.N[vertice_atual] == self.N[
-                                vertice_impar[1]] and cont_aresta_impar == grau_aresta_impar - 1:
-                                vertice_atual += 1
-                                verifica_linha = 1
-                                break
+                        if i != vertice_atual and self.M[i][vertice_atual] != '-' and self.M[i][vertice_atual] > 0:
                             self.M[i][vertice_atual] -= 1
+                            caminho.append(self.N[i])
                             vertice_atual = i
-                            print(self.N[i])
 
                             verifica_linha = 1
                             break
 
-
-                cont += 1
-                if cont == 11:
+                if verifica_linha == 0:
+                    for i in range(len(caminho)):
+                        if i < len(caminho)-1:
+                            print(caminho[i]+'-',end='')
+                        else:
+                            print(caminho[i])
+                    return True
                     break
-
+        else:
+            return False
     def __str__(self):
         '''
         Fornece uma representação do tipo String do grafo.
