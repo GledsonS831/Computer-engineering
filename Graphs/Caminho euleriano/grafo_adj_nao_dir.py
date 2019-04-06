@@ -203,7 +203,7 @@ class Grafo:
         else:
             raise ArestaInvalidaException('A aresta {} é inválida'.format(a))
 
-    '''def eh_conexo(self):
+    def eh_conexo(self):
         contem = 0
         for i in range(len(self.N)):
             for j in range(len(self.N)):
@@ -215,7 +215,7 @@ class Grafo:
                         contem = 1
             if contem == 0:
                 return False
-        return True'''
+        return True
 
     def grau(self, vertice):
         index = 1
@@ -235,15 +235,15 @@ class Grafo:
             return True
         return False
 
-    def eh_conexo(self):
-        print(self)
+    '''def eh_conexo(self):
+
         for x in range(0, len(self.N) - 1):
             conf = 0
             for y in range(x+1, len(self.N)):
                 conf += self.M[x][y]
             if conf == 0 and self.config(x):
                 return False
-        return True
+        return True'''
 
     def caminho_euleriano(self):
         vertice_impar = []
@@ -262,7 +262,7 @@ class Grafo:
 
         ##print(vertice_impar)
 
-        if len(vertice_impar) == 2:
+        if len(vertice_impar) == 2 and self.eh_conexo() == True:
             print("impares")
             caminho = []
             vertice_atual = vertice_impar[0]
@@ -299,14 +299,10 @@ class Grafo:
                             verifica_linha = 1
                             break
                 if verifica_linha == 0:
-                    for i in range(len(caminho)):
-                        if i < len(caminho)-1:
-                            print(caminho[i]+'-',end='')
-                        else:
-                            print(caminho[i])
-                    return True
-                    break
-        elif len(vertice_impar) == 0:
+                    print(caminho)
+                    return caminho
+
+        elif len(vertice_impar) == 0 and self.eh_conexo() == True:
             print("nenhum impar")
             caminho = []
             vertice_atual = 0
@@ -315,7 +311,6 @@ class Grafo:
             ##cont_aresta_impar = self.grau(self.N[vertice_impar[1]])
             ##print(cont_aresta_impar)
             verifica_linha = 0
-            print("caminho euleriano formado:")
             caminho.append(self.N[0])
             while True:
                 verifica_linha = 0
@@ -339,13 +334,9 @@ class Grafo:
                             break
 
                 if verifica_linha == 0:
-                    for i in range(len(caminho)):
-                        if i < len(caminho)-1:
-                            print(caminho[i]+'-',end='')
-                        else:
-                            print(caminho[i])
-                    return True
-                    break
+                    print(caminho)
+                    return caminho
+
         else:
             return False
     def __str__(self):
