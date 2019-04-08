@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f6527528-b5a9-4cc8-8cf1-a081a04be8ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/euler_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/euler_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grafo_adj_nao_dir.py" beforeDir="false" afterPath="$PROJECT_DIR$/grafo_adj_nao_dir.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testando.py" beforeDir="false" afterPath="$PROJECT_DIR$/testando.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/euler_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="133" column="112" lean-forward="true" selection-start-line="133" selection-start-column="112" selection-end-line="133" selection-end-column="112" />
+            <state relative-caret-position="17">
+              <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -42,7 +39,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grafo_adj_nao_dir.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1412">
+            <state relative-caret-position="4165">
               <caret line="245" column="22" selection-start-line="245" selection-start-column="22" selection-end-line="245" selection-end-column="22" />
             </state>
           </provider>
@@ -80,6 +77,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -91,7 +89,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -181,9 +178,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_euler_test_TestEuler_test_caminho_euleriano - 2019.04.05 at 21h 15m 35s.xml">
-      <configuration name="Unittests for euler_test.TestEuler.test_caminho_euleriano" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_euler_test_TestEuler_test_caminho_euleriano - 2019.04.05 at 21h 15m 57s.xml">
       <configuration name="Unittests for euler_test.TestEuler.test_caminho_euleriano" configurationId="tests" />
     </history-entry>
@@ -211,16 +205,20 @@
     <history-entry file="Unittests_for_euler_test_TestEuler_test_caminho_euleriano - 2019.04.05 at 21h 59m 05s.xml">
       <configuration name="Unittests for euler_test.TestEuler.test_caminho_euleriano" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_euler_test_TestEuler_test_caminho_euleriano - 2019.04.07 at 22h 19m 33s.xml">
+      <configuration name="Unittests for euler_test.TestEuler.test_caminho_euleriano" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38627186" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38627186" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -235,6 +233,16 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/euler_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testando.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -244,18 +252,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grafo_adj_nao_dir.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1412">
+        <state relative-caret-position="4165">
           <caret line="245" column="22" selection-start-line="245" selection-start-column="22" selection-end-line="245" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/euler_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="133" column="112" lean-forward="true" selection-start-line="133" selection-start-column="112" selection-end-line="133" selection-end-column="112" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
