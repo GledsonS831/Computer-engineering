@@ -1,5 +1,6 @@
 import unittest
-import grafo_adj
+from grafo_adj import *
+
 
 
 class TestGrafo(unittest.TestCase):
@@ -31,29 +32,7 @@ class TestGrafo(unittest.TestCase):
         self.g_c3 = Grafo([], [])
         self.g_c3.adiciona_vertice('J')
 
-        def warshall(self):
-            E = self.M.copy()
-            for i in range(len(self.N)):
-                for j in range(len(self.N)):
-                    if E[j][i] == 1:
-                        for k in range(len(self.N)):
-                            E[j][k] = max(E[j][k], E[i][k])
 
-            return E
-
-        def eh_conexo(self):
-            contem = 0
-            for i in range(len(self.N)):
-                for j in range(len(self.N)):
-                    if (self.M[i][j] != '-' and self.M[i][j] > 0 and contem == 0):
-                        contem = 1
-                if contem == 0:
-                    for j in range(len(self.N)):
-                        if (self.M[j][i] != '-' and self.M[j][i] > 0):
-                            contem = 1
-                if contem == 0:
-                    return False
-            return True
 
         # Grafos com laco
         self.g_l1 = Grafo([], [])
@@ -115,8 +94,10 @@ class TestGrafo(unittest.TestCase):
 
     def test_warshal(self):
         self.assertEqual(self.g_l2.warshall(), [[1, 1, 0, 0], [1, 1, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])
+        self.assertEqual(self.g_l3.warshall(), [[0, 0, 0, 0], [0, 0, 0, 0], [1, 0, 1, 0], [0, 0, 0, 1]])
         self.assertEqual(self.g_16.warshall(), [[0, 1, 1, 1, 1], [0, 0, 1, 1, 1], [0, 0, 0, 1, 0], [0, 0, 0, 0, 0], [0, 0, 1, 1, 0]])
         self.assertEqual(self.g_17.warshall(), [[1, 0, 1, 1, 1], [1, 0, 1, 1, 1], [1, 0, 1, 1, 1], [0, 0, 0, 0, 0], [1, 0, 1, 1, 1]])
         self.assertEqual(self.g_18.warshall(), [[0, 1, 0, 0, 1, 1], [0, 0, 0, 0, 1, 0], [0, 1, 0, 1, 1, 0], [0, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0]])
         self.assertEqual(self.g_19.warshall(), [[0, 0, 0, 0, 0, 0], [1, 0, 1, 0, 1, 1], [0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 1, 1], [0, 0, 1, 0, 0, 1], [0, 0, 1, 0, 0, 0]])
+
 

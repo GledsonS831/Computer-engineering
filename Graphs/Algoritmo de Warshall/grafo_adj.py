@@ -151,16 +151,17 @@ class Grafo:
         return True
 
     def warshall(self):
-
-        E = self.M.copy()
-        for i in range(len(self.N)):
-            for j in range(len(self.N)):
-                if E[j][i] == 1:
-                    for k in range(len(self.N)):
-                        E[j][k] = max(E[j][k], E[i][k])
-
-        return E
-
+        if self.eh_conexo():
+            E = self.M.copy()
+            for i in range(len(self.N)):
+                for j in range(len(self.N)):
+                    if E[j][i] == 1:
+                        for k in range(len(self.N)):
+                            E[j][k] = max(E[j][k], E[i][k])
+            print(E)
+            return E
+        else:
+            return False
     def __str__(self):
         '''
         Fornece uma representação do tipo String do grafo.
