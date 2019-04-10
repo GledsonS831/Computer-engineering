@@ -155,10 +155,12 @@ class Grafo:
             E = self.M.copy()
             for i in range(len(self.N)):
                 for j in range(len(self.N)):
-                    if E[j][i] == 1:
+                    if E[j][i] != 0:
                         for k in range(len(self.N)):
                             E[j][k] = max(E[j][k], E[i][k])
-            print(E)
+                            if(E[j][k] > 1):
+                                E[j][k] = 1
+
             return E
         else:
             return False
