@@ -8,4 +8,4 @@ for i in ['a', 'b', 'c', 'd', 'e', 'f']:
 for i in ['a-b', 'a-f', 'b-e', 'c-b', 'c-d', 'd-e', 'f-e','b-e']:
     g.adiciona_aresta(i)
 
-print(g.warshall())
+print(g)
