@@ -92,12 +92,4 @@ class TestGrafo(unittest.TestCase):
         for i in ['b-a', 'b-e', 'b-f', 'd-e', 'f-c', 'e-f']:
             self.g_19.adiciona_aresta(i)
 
-    def test_warshal(self):
-        self.assertEqual(self.g_l2.warshall(), [[1, 1, 0, 0], [1, 1, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])
-        self.assertEqual(self.g_l3.warshall(), [[0, 0, 0, 0], [0, 0, 0, 0], [1, 0, 1, 0], [0, 0, 0, 1]])
-        self.assertEqual(self.g_16.warshall(), [[0, 1, 1, 1, 1], [0, 0, 1, 1, 1], [0, 0, 0, 1, 0], [0, 0, 0, 0, 0], [0, 0, 1, 1, 0]])
-        self.assertEqual(self.g_17.warshall(), [[1, 0, 1, 1, 1], [1, 0, 1, 1, 1], [1, 0, 1, 1, 1], [0, 0, 0, 0, 0], [1, 0, 1, 1, 1]])
-        self.assertEqual(self.g_18.warshall(), [[0, 1, 0, 0, 1, 1], [0, 0, 0, 0, 1, 0], [0, 1, 0, 1, 1, 0], [0, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0]])
-        self.assertEqual(self.g_19.warshall(), [[0, 0, 0, 0, 0, 0], [1, 0, 1, 0, 1, 1], [0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 1, 1], [0, 0, 1, 0, 0, 1], [0, 0, 1, 0, 0, 0]])
-
 

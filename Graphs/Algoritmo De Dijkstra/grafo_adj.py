@@ -136,34 +136,10 @@ class Grafo:
         else:
             ArestaInvalidaException('A aresta ' + self.A[a] + ' é inválida')
 
-    def eh_conexo(self):
-        contem = 0
-        for i in range(len(self.N)):
-            for j in range(len(self.N)):
-                if (self.M[i][j] != '-' and self.M[i][j] > 0 and contem == 0):
-                    contem = 1
-            if contem == 0:
-                for j in range(len(self.N)):
-                    if (self.M[j][i] != '-' and self.M[j][i] > 0):
-                        contem = 1
-            if contem == 0:
-                return False
-        return True
+    def dijkstra(self,u, v, grafo):
+        pass
 
-    def warshall(self):
-        if self.eh_conexo():
-            E = self.M.copy()
-            for i in range(len(self.N)):
-                for j in range(len(self.N)):
-                    if E[j][i] != 0:
-                        for k in range(len(self.N)):
-                            E[j][k] = max(E[j][k], E[i][k])
-                            if(E[j][k] > 1):
-                                E[j][k] = 1
 
-            return E
-        else:
-            return False
     def __str__(self):
         '''
         Fornece uma representação do tipo String do grafo.
