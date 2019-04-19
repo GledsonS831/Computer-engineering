@@ -1,3 +1,4 @@
+from math import inf
 class VerticeInvalidoException(Exception):
     pass
 
@@ -134,12 +135,57 @@ class Grafo:
         if self.aresta_valida(a):
             self.M[self.indice_primeiro_vertice_aresta(a)][self.indice_segundo_vertice_aresta(a)] += 1
         else:
-            ArestaInvalidaException('A aresta ' + self.A[a] + ' é inválida')
+             ArestaInvalidaException('A aresta ' + self.A[a] + ' é inválida')
+    def verifica_menor(self, beta, fi):
+        menor = 999999
+        for r in beta:
+            if beta[r] != inf and fi[r] == 0:
+                if beta[r] < menor:
+                    menor = beta[r]
+        return menor
+    def dijkstra(self,inicio, fim):
+        u = inicio
+        v = fim
+        beta = {}
+        fi = {}
+        pi = {}
+        w = u
+        for i in range(len(self.N)):
+            for j in range(len(self.N)):
+                if i == j:
+                    self.M[i][j] = 0
 
-    def dijkstra(self,u, v, grafo):
-        pass
+        for i in range(len(self.N)):
+            if self.N[i] != u:
+                beta[self.N[i]] = inf
+            else:
+                beta[self.N[i]] = 0
+        for i in range(len(self.N)):
+            if self.N[i] != u:
+                fi[self.N[i]] = 0
+            else:
+                fi[self.N[i]] = 1
 
+        for i in range(len(self.N)):
+            pi[self.N[i]] = '-'
+        count = 0
+        while w != v:
+            count+=1
+            for i in range(len(self.N)):
+                r = self.N[i]
+                alpha = self.M[self.N.index(w)][self.N.index(r)]
+                if alpha == 1 and  fi[r] == 0 and beta[r] > beta[w] + alpha:
+                    beta[r] = beta[w] + alpha
+                    pi[r] = w
 
+            min = self.verifica_menor(beta, fi)
+            for r in beta:
+                if beta[r] != inf and fi[r] == 0 and beta[r] == min:
+                    fi[r] = 1
+                    w = r
+                    break
+
+        print(pi)
     def __str__(self):
         '''
         Fornece uma representação do tipo String do grafo.
