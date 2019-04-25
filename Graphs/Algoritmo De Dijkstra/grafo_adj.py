@@ -136,14 +136,15 @@ class Grafo:
             self.M[self.indice_primeiro_vertice_aresta(a)][self.indice_segundo_vertice_aresta(a)] += 1
         else:
              ArestaInvalidaException('A aresta ' + self.A[a] + ' é inválida')
-    def verifica_menor(self, beta, fi):
-        menor = 999999
-        for r in beta:
-            if beta[r] != inf and fi[r] == 0:
-                if beta[r] < menor:
-                    menor = beta[r]
+    def verifica_menor(self, beta, fi, pontos, carga):
+        menor = 99999
+
+        for r in pontos:
+            if pontos[r] != -inf and fi[r] == 0 and pontos[r] < menor:
+                menor = pontos[r]
+        print(fi)
         return menor
-    def dijkstra(self,inicio, fim):
+    '''def dijkstra(self,carga_inicial, carga_ponto,lista_cargas, inicio, fim):
         u = inicio
         v = fim
         beta = {}
@@ -183,6 +184,70 @@ class Grafo:
                 if beta[r] != inf and fi[r] == 0 and beta[r] == min:
                     fi[r] = 1
                     w = r
+                    break
+
+        print(pi)'''
+
+    def dijkstra2(self, carga_inicial, carga_bateria, lista_cargas, inicio, fim):
+        u = inicio
+        v = fim
+        beta = {}
+        fi = {}
+        pi = {}
+        pontos = {}
+        for i in range(len(self.N)):
+            if self.N[i] != u:
+                pontos[self.N[i]] = -inf
+            else:
+                pontos[self.N[i]] = 0
+        w = u
+
+        for i in range(len(self.N)):
+            for j in range(len(self.N)):
+                if i == j:
+                    self.M[i][j] = 0
+
+        for i in range(len(self.N)):
+            if self.N[i] != u:
+                beta[self.N[i]] = inf
+            else:
+                beta[self.N[i]] = 0
+        for i in range(len(self.N)):
+            if self.N[i] != u:
+                fi[self.N[i]] = 0
+            else:
+                fi[self.N[i]] = 1
+
+        for i in range(len(self.N)):
+            pi[self.N[i]] = '-'
+        count = 0
+
+        while w != v:
+            count += 1
+            for i in range(len(self.N)):
+                r = self.N[i]
+                alpha = self.M[self.N.index(w)][self.N.index(r)]
+
+                if alpha == 1 and fi[r] == 0 and pontos[r] < pontos[w]+1:
+                    ##beta[r] = beta[w] + alpha
+                    ##pontos[r] = pontos[w] + alpha
+                    pontos[r] = pontos[w]+1
+                    if(pontos[r] > carga_bateria):
+                        pass
+                    else:
+                        pi[r] = w
+
+
+            min = self.verifica_menor(beta, fi, pontos, carga_bateria)
+            print(min)
+            for r in beta:
+                if pontos[r] != -inf and fi[r] == 0  and pontos[r] == min:
+                    fi[r] = 1
+                    w = r
+
+                    if w in lista_cargas:
+                        pontos[w] = 0
+
                     break
 
         print(pi)
