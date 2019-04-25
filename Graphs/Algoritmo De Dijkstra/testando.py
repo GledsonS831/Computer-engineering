@@ -18,7 +18,7 @@ for i in ['a','b','c','d','e']:
 for i in ['a-b','b-c','c-d','d-e']:
     n.adiciona_aresta(i)
 l = ['a']
-##n.dijkstra2(4,4,l,'a','e')
+print(n.dijkstra(4,4,l,'a','e'))
 c2 = Grafo([], [])
 
 for i in ['a','b','c','d','e','f','g','h']:
@@ -28,6 +28,10 @@ for i in ['h-f','h-b','f-g','g-e','e-d','b-c','c-a','a-d']:
 
 r = ['g']
 
-##c2.dijkstra2(2,2,r,'h','d')
+##print(c2.dijkstra2(2,2,r,'h','d'))
+##g_challenger.dijkstra('A','J')
+##print(g_challenger.dijkstra(3, 4,lista_carga, 'A','S'))
 
-g_challenger.dijkstra2(3, 3,lista_carga, 'A','S')
+
+
+

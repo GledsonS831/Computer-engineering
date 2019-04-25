@@ -136,15 +136,15 @@ class Grafo:
             self.M[self.indice_primeiro_vertice_aresta(a)][self.indice_segundo_vertice_aresta(a)] += 1
         else:
              ArestaInvalidaException('A aresta ' + self.A[a] + ' é inválida')
-    def verifica_menor(self, beta, fi, pontos, carga):
-        menor = 99999
 
-        for r in pontos:
-            if pontos[r] != -inf and fi[r] == 0 and pontos[r] < menor:
-                menor = pontos[r]
-        print(fi)
-        return menor
-    '''def dijkstra(self,carga_inicial, carga_ponto,lista_cargas, inicio, fim):
+    '''def verifica_menor(self, beta, fi):
+        menor = 99999
+        for r in beta:
+            if  beta[r] != -inf and fi[r] == 0:
+                if beta[r] < menor:
+                    menor = beta[r]
+        return menor'''
+    '''def dijkstra_menor_caminho(self,inicio, fim):
         u = inicio
         v = fim
         beta = {}
@@ -187,8 +187,16 @@ class Grafo:
                     break
 
         print(pi)'''
+    def verifica_menor(self, beta, fi, pontos, carga):
+        menor = 9999
+        for r in pontos:
+            if pontos[r] != inf and fi[r] == 0:
+                if pontos[r] < menor:
+                    menor = pontos[r]
 
-    def dijkstra2(self, carga_inicial, carga_bateria, lista_cargas, inicio, fim):
+        return menor
+
+    def dijkstra(self, carga_inicial, carga_bateria, lista_cargas, inicio, fim):
         u = inicio
         v = fim
         beta = {}
@@ -197,7 +205,7 @@ class Grafo:
         pontos = {}
         for i in range(len(self.N)):
             if self.N[i] != u:
-                pontos[self.N[i]] = -inf
+                pontos[self.N[i]] = inf
             else:
                 pontos[self.N[i]] = 0
         w = u
@@ -228,29 +236,46 @@ class Grafo:
                 r = self.N[i]
                 alpha = self.M[self.N.index(w)][self.N.index(r)]
 
-                if alpha == 1 and fi[r] == 0 and pontos[r] < pontos[w]+1:
+                if alpha == 1 and fi[r] == 0 and pontos[r] > pontos[w]+1:
                     ##beta[r] = beta[w] + alpha
                     ##pontos[r] = pontos[w] + alpha
+
                     pontos[r] = pontos[w]+1
-                    if(pontos[r] > carga_bateria):
-                        pass
+                    if(pontos[r] > carga_inicial):
+                       pass
                     else:
                         pi[r] = w
 
 
-            min = self.verifica_menor(beta, fi, pontos, carga_bateria)
-            print(min)
+            min = self.verifica_menor(beta, fi, pontos, carga_inicial)
+
             for r in beta:
-                if pontos[r] != -inf and fi[r] == 0  and pontos[r] == min:
+                if pontos[r] != inf and fi[r] == 0  and pontos[r] == min:
+                    
                     fi[r] = 1
                     w = r
 
                     if w in lista_cargas:
                         pontos[w] = 0
-
+                        carga_inicial = carga_bateria
                     break
+        r = v
+        caminho = []
+        caminho.append(r)
+        while pi[r] != u:
+            for i in pi:
+                if pi[r] == '-':
+                    return False
+                elif i == r:
+                    caminho.append(pi[r])
 
-        print(pi)
+                    r = pi[i]
+
+        caminho.append(pi[r])
+        return caminho
+
+
+
     def __str__(self):
         '''
         Fornece uma representação do tipo String do grafo.
