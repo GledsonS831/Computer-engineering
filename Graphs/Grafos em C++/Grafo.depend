@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1556932573 source:c:\users\gledson\documents\grafos em c++\grafo\grafo.cpp
+	<iostream>
+	<map>
+	<list>
+	<cstdlib>
+
