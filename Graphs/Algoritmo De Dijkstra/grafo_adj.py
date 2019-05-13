@@ -1,15 +1,19 @@
 from math import inf
+
+
 class VerticeInvalidoException(Exception):
     pass
+
 
 class ArestaInvalidaException(Exception):
     pass
 
+
 class MatrizInvalidaException(Exception):
     pass
 
-class Grafo:
 
+class Grafo:
     QTDE_MAX_SEPARADOR = 1
     SEPARADOR_ARESTA = '-'
     __maior_vertice = 0
@@ -22,7 +26,7 @@ class Grafo:
         :param V: Uma matriz de adjacência que guarda as arestas do grafo. Cada entrada da matriz tem um inteiro que indica a quantidade de arestas que ligam aqueles vértices
         '''
         for v in N:
-            if not(Grafo.vertice_valido(v)):
+            if not (Grafo.vertice_valido(v)):
                 raise VerticeInvalidoException('O vértice ' + v + ' é inválido')
             if len(v) > self.__maior_vertice:
                 self.__maior_vertice = len(v)
@@ -39,7 +43,7 @@ class Grafo:
         for i in range(len(N)):
             for j in range(len(N)):
                 aresta = N[i] + Grafo.SEPARADOR_ARESTA + N[j]
-                if not(self.aresta_valida(aresta)):
+                if not (self.aresta_valida(aresta)):
                     raise ArestaInvalidaException('A aresta ' + aresta + ' é inválida')
 
         self.M = M
@@ -67,7 +71,7 @@ class Grafo:
         if i_traco == 0 or aresta[-1] == Grafo.SEPARADOR_ARESTA:
             return False
 
-        if not(self.existe_vertice(aresta[:i_traco])) or not(self.existe_vertice(aresta[i_traco + 1:])):
+        if not (self.existe_vertice(aresta[:i_traco])) or not (self.existe_vertice(aresta[i_traco + 1:])):
             return False
 
         return True
@@ -94,7 +98,7 @@ class Grafo:
         return a[0:a.index(Grafo.SEPARADOR_ARESTA)]
 
     def segundo_vertice_aresta(self, a: str):
-        return a[a.index(Grafo.SEPARADOR_ARESTA)+1:]
+        return a[a.index(Grafo.SEPARADOR_ARESTA) + 1:]
 
     def indice_primeiro_vertice_aresta(self, a: str):
         return self.N.index(self.primeiro_vertice_aresta(a))
@@ -125,7 +129,7 @@ class Grafo:
             self.N.append(v)
             self.M.append([])
             for k in range(len(self.N)):
-                if k != len(self.N) -1:
+                if k != len(self.N) - 1:
                     self.M[k].append(0)
                 self.M[self.N.index(v)].append(0)
         else:
@@ -135,7 +139,7 @@ class Grafo:
         if self.aresta_valida(a):
             self.M[self.indice_primeiro_vertice_aresta(a)][self.indice_segundo_vertice_aresta(a)] += 1
         else:
-             ArestaInvalidaException('A aresta ' + self.A[a] + ' é inválida')
+            ArestaInvalidaException('A aresta ' + self.A[a] + ' é inválida')
 
     '''def verifica_menor(self, beta, fi):
         menor = 99999
@@ -144,7 +148,7 @@ class Grafo:
                 if beta[r] < menor:
                     menor = beta[r]
         return menor'''
-    '''def dijkstra_menor_caminho(self,inicio, fim):
+    def dijkstra_menor_caminho(self,inicio, fim):
         u = inicio
         v = fim
         beta = {}
@@ -155,7 +159,6 @@ class Grafo:
             for j in range(len(self.N)):
                 if i == j:
                     self.M[i][j] = 0
-
         for i in range(len(self.N)):
             if self.N[i] != u:
                 beta[self.N[i]] = inf
@@ -166,7 +169,6 @@ class Grafo:
                 fi[self.N[i]] = 0
             else:
                 fi[self.N[i]] = 1
-
         for i in range(len(self.N)):
             pi[self.N[i]] = '-'
         count = 0
@@ -178,15 +180,14 @@ class Grafo:
                 if alpha == 1 and  fi[r] == 0 and beta[r] > beta[w] + alpha:
                     beta[r] = beta[w] + alpha
                     pi[r] = w
-
             min = self.verifica_menor(beta, fi)
             for r in beta:
                 if beta[r] != inf and fi[r] == 0 and beta[r] == min:
                     fi[r] = 1
                     w = r
                     break
+        print(pi)
 
-        print(pi)'''
     def verifica_menor(self, beta, fi, pontos, carga):
         menor = 9999
         for r in pontos:
@@ -236,22 +237,21 @@ class Grafo:
                 r = self.N[i]
                 alpha = self.M[self.N.index(w)][self.N.index(r)]
 
-                if alpha == 1 and fi[r] == 0 and pontos[r] > pontos[w]+1:
+                if alpha == 1 and fi[r] == 0 and pontos[r] > pontos[w] + 1:
                     ##beta[r] = beta[w] + alpha
                     ##pontos[r] = pontos[w] + alpha
 
-                    pontos[r] = pontos[w]+1
-                    if(pontos[r] > carga_inicial):
-                       pass
+                    pontos[r] = pontos[w] + 1
+                    if (pontos[r] > carga_inicial):
+                        pass
                     else:
                         pi[r] = w
-
 
             min = self.verifica_menor(beta, fi, pontos, carga_inicial)
 
             for r in beta:
-                if pontos[r] != inf and fi[r] == 0  and pontos[r] == min:
-                    
+                if pontos[r] != inf and fi[r] == 0 and pontos[r] == min:
+
                     fi[r] = 1
                     w = r
 
@@ -274,8 +274,6 @@ class Grafo:
         caminho.append(pi[r])
         return caminho
 
-
-
     def __str__(self):
         '''
         Fornece uma representação do tipo String do grafo.
@@ -284,7 +282,7 @@ class Grafo:
         '''
 
         # Dá o espaçamento correto de acordo com o tamanho do string do maior vértice
-        espaco = ' '*(self.__maior_vertice)
+        espaco = ' ' * (self.__maior_vertice)
 
         grafo_str = espaco + ' '
 
@@ -302,3 +300,5 @@ class Grafo:
             grafo_str += '\n'
 
         return grafo_str
+
+
