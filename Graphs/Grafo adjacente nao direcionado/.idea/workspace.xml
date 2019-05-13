@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79429b0e-5df3-4f20-a02c-a94dec2bbaf2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Algoritmo De Dijkstra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Algoritmo De Dijkstra/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Algoritmo De Dijkstra/grafo_adj.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Algoritmo De Dijkstra/grafo_adj.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Algoritmo De Dijkstra/grafo_adj_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Algoritmo De Dijkstra/grafo_adj_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Algoritmo De Dijkstra/testando.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Algoritmo De Dijkstra/testando.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grafo_adj_nao_dir.py" beforeDir="false" afterPath="$PROJECT_DIR$/grafo_adj_nao_dir.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testando.py" beforeDir="false" afterPath="$PROJECT_DIR$/testando.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prim/grafo_adj_nao_dir.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Prim/grafo_adj_nao_dir.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +18,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testando.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+            <state relative-caret-position="374">
+              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grafo_adj_nao_dir.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="335" column="28" selection-start-line="335" selection-start-column="28" selection-end-line="335" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -48,14 +55,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/grafo_test.py" />
-        <option value="$PROJECT_DIR$/grafo_adj_nao_dir.py" />
         <option value="$PROJECT_DIR$/testando.py" />
+        <option value="$PROJECT_DIR$/grafo_adj_nao_dir.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="713" />
-    <option name="width" value="734" />
+    <option name="width" value="733" />
     <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -66,7 +73,7 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/grafo_test.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/grafo_adj_nao_dir.py" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -222,8 +229,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22476447" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36473754" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -249,15 +256,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grafo_adj_nao_dir.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="298" column="19" selection-start-line="298" selection-start-column="19" selection-end-line="298" selection-end-column="19" />
+        <state relative-caret-position="258">
+          <caret line="335" column="28" selection-start-line="335" selection-start-column="28" selection-end-line="335" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testando.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        <state relative-caret-position="374">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
         </state>
       </provider>
     </entry>

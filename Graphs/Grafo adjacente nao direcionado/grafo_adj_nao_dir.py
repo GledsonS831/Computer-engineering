@@ -35,7 +35,7 @@ class Grafo:
                 self.__maior_vertice = len(v)
 
         self.N = list(V)
-
+        self.pesos = {}
         if M == []:
             for k in range(len(V)):
                 M.append(list())
@@ -187,7 +187,7 @@ class Grafo:
         else:
             raise VerticeInvalidoException('O vértice ' + v + ' é inválido')
 
-    def adicionaAresta(self, a):
+    def adicionaAresta(self, a, peso):
         '''
         Adiciona uma aresta ao grafo no formato X-Y, onde X é o primeiro vértice e Y é o segundo vértice
         :param a: a aresta no formato correto
@@ -202,7 +202,7 @@ class Grafo:
                 self.M[i_a2][i_a1] += 1
         else:
             raise ArestaInvalidaException('A aresta {} é inválida'.format(a))
-
+        self.pesos[a] = peso
     def remove_aresta(self, a):
         '''
         Remove uma aresta ao grafo no formato X-Y, onde X é o primeiro vértice e Y é o segundo vértice
@@ -300,9 +300,54 @@ class Grafo:
                         soma += self.M[i][j]
         return soma
 
+    def prim(self, inicial):
+        verificado = []
+        verificado.append(inicial)
+        aux = []
+        c = 0
+        while True:
+            c+=1
+            for i in verificado:
+                for j in range(len(self.N)):
+                    if self.M[self.N.index(i)][j] == 1 and self.N[j] not in verificado:
+                        aresta = self.N[j]+"-"+i
+                        aux.append(aresta)
+                        ##print(self.M[self.N.index(i)][j])
+
+                    if self.M[j][self.N.index(i)] == 1 and self.N[j] not in verificado:
+                        ##print(self.M[j][self.N.index(i)])
+                        aresta = i + "-" + self.N[j]
+                        aux.append(aresta)
+                break
+            menor_peso = 99999
+            lista_correta = []
+
+            for i in aux:
+                v1 = i[0]
+                v2 = i[2]
+                aresta_aux = v1+"-"+v2
+                if self.M[self.N.index(aresta_aux[0])][self.N.index(aresta_aux[2])] == "-":
+                    aresta_aux = v2+"-"+v1
+                lista_correta.append(aresta_aux)
+
+            for i in lista_correta:
+                if self.pesos[i] < menor_peso:
+                    menor_peso = self.pesos[i]
+            for i in lista_correta:
+                if self.pesos[i] == menor_peso:
+                    verificado.append(i[0])
+
+            print(verificado)
+            aux = []
+            if c == 1:
+                break
 
 
 
+
+        '''print(self.M[self.N.index(v1)][self.N.index(v2)])
+        print(self.M[self.N.index(v2)][self.N.index(v1)])
+        print(self.pesos[v2+'-'+v1])'''
 
     def __str__(self):
         '''

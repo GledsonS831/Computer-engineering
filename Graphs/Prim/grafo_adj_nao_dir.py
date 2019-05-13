@@ -300,7 +300,8 @@ class Grafo:
                         soma += self.M[i][j]
         return soma
 
-
+        def prim(self):
+            pass
 
 
 
