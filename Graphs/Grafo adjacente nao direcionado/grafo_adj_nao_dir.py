@@ -305,9 +305,10 @@ class Grafo:
         verificado.append(inicial)
         aux = []
         c = 0
-        while True:
+        while len(self.N) != len(verificado):
             c+=1
             for i in verificado:
+
                 for j in range(len(self.N)):
                     if self.M[self.N.index(i)][j] == 1 and self.N[j] not in verificado:
                         aresta = self.N[j]+"-"+i
@@ -318,7 +319,7 @@ class Grafo:
                         ##print(self.M[j][self.N.index(i)])
                         aresta = i + "-" + self.N[j]
                         aux.append(aresta)
-                break
+            #print(aux)
             menor_peso = 99999
             lista_correta = []
 
@@ -330,17 +331,21 @@ class Grafo:
                     aresta_aux = v2+"-"+v1
                 lista_correta.append(aresta_aux)
 
+
             for i in lista_correta:
                 if self.pesos[i] < menor_peso:
                     menor_peso = self.pesos[i]
             for i in lista_correta:
                 if self.pesos[i] == menor_peso:
-                    verificado.append(i[0])
+                    if i[0] not in verificado:
+                        verificado.append(i[0])
+                    elif i[0] in verificado and i[2] not in verificado:
+                        verificado.append(i[2])
 
             print(verificado)
             aux = []
-            if c == 1:
-                break
+
+            
 
 
 
