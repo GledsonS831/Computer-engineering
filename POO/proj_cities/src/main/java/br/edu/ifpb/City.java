@@ -24,6 +24,7 @@ public class City implements Comparable<City> {
     public int compareTo(City city) {
         return this.getName().compareTo(city.getName());
     }
+
     @Override
     public boolean equals(Object o){
         if(o.getClass() != getClass() || o == null){
@@ -33,6 +34,7 @@ public class City implements Comparable<City> {
         if(this.hashCode() - o.hashCode() == 0){return true;}
         return false;
     }
+
     @Override
     public int hashCode(){
         return this.getName().charAt(0);
