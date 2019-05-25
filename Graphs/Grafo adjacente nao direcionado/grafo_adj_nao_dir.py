@@ -345,7 +345,7 @@ class Grafo:
             print(verificado)
             aux = []
 
-            
+
 
 
 

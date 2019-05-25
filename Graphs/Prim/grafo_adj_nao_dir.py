@@ -3,14 +3,16 @@
 class VerticeInvalidoException(Exception):
     pass
 
+
 class ArestaInvalidaException(Exception):
     pass
+
 
 class MatrizInvalidaException(Exception):
     pass
 
-class Grafo:
 
+class Grafo:
     QTDE_MAX_SEPARADOR = 1
     SEPARADOR_ARESTA = '-'
     __maior_vertice = 0
@@ -29,22 +31,21 @@ class Grafo:
             M = list()
 
         for v in V:
-            if not(Grafo.verticeValido(v)):
+            if not (Grafo.verticeValido(v)):
                 raise VerticeInvalidoException('O vértice ' + v + ' é inválido')
             if len(v) > self.__maior_vertice:
                 self.__maior_vertice = len(v)
 
         self.N = list(V)
-
+        self.pesos = {}
         if M == []:
             for k in range(len(V)):
                 M.append(list())
                 for l in range(len(V)):
-                    if k>l:
+                    if k > l:
                         M[k].append('-')
                     else:
                         M[k].append(0)
-
 
         if len(M) != len(V):
             raise MatrizInvalidaException('A matriz passada como parâmetro não tem o tamanho correto')
@@ -59,12 +60,11 @@ class Grafo:
                 Verifica se os índices passados como parâmetro representam um elemento da matriz abaixo da diagonal principal.
                 Além disso, verifica se o referido elemento é um traço "-". Isso indica que a matriz é não direcionada e foi construída corretamente.
                 '''
-                if i>j and not(M[i][j] == '-'):
+                if i > j and not (M[i][j] == '-'):
                     raise MatrizInvalidaException('A matriz não representa uma matriz não direcionada')
 
-
                 aresta = V[i] + Grafo.SEPARADOR_ARESTA + V[j]
-                if not(self.arestaValida(aresta)):
+                if not (self.arestaValida(aresta)):
                     raise ArestaInvalidaException('A aresta ' + aresta + ' é inválida')
 
         self.M = list(M)
@@ -92,7 +92,7 @@ class Grafo:
         if i_traco == 0 or aresta[-1] == Grafo.SEPARADOR_ARESTA:
             return False
 
-        if not(self.existeVertice(aresta[:i_traco])) or not(self.existeVertice(aresta[i_traco+1:])):
+        if not (self.existeVertice(aresta[:i_traco])) or not (self.existeVertice(aresta[i_traco + 1:])):
             return False
 
         return True
@@ -129,7 +129,7 @@ class Grafo:
         :param a: A aresta a ser analisada
         :return: O segundo vértice da aresta
         '''
-        return a[a.index(Grafo.SEPARADOR_ARESTA)+1:]
+        return a[a.index(Grafo.SEPARADOR_ARESTA) + 1:]
 
     def __indice_primeiro_vertice_aresta(self, a: str):
         '''
@@ -175,19 +175,19 @@ class Grafo:
             if len(v) > self.__maior_vertice:
                 self.__maior_vertice = len(v)
 
-            self.N.append(v) # Adiciona vértice na lista de vértices
-            self.M.append([]) # Adiciona a linha
+            self.N.append(v)  # Adiciona vértice na lista de vértices
+            self.M.append([])  # Adiciona a linha
 
             for k in range(len(self.N)):
-                if k != len(self.N) -1:
-                    self.M[k].append(0) # adiciona os elementos da coluna do vértice
-                    self.M[self.N.index(v)].append('-') # adiciona os elementos da linha do vértice
+                if k != len(self.N) - 1:
+                    self.M[k].append(0)  # adiciona os elementos da coluna do vértice
+                    self.M[self.N.index(v)].append('-')  # adiciona os elementos da linha do vértice
                 else:
                     self.M[self.N.index(v)].append(0)  # adiciona um zero no último elemento da linha
         else:
             raise VerticeInvalidoException('O vértice ' + v + ' é inválido')
 
-    def adicionaAresta(self, a):
+    def adicionaAresta(self, a, peso):
         '''
         Adiciona uma aresta ao grafo no formato X-Y, onde X é o primeiro vértice e Y é o segundo vértice
         :param a: a aresta no formato correto
@@ -202,6 +202,7 @@ class Grafo:
                 self.M[i_a2][i_a1] += 1
         else:
             raise ArestaInvalidaException('A aresta {} é inválida'.format(a))
+        self.pesos[a] = peso
 
     def remove_aresta(self, a):
         '''
@@ -225,14 +226,14 @@ class Grafo:
         for i in range(len(self.N)):
             for j in range(len(self.N)):
                 if self.M[i][j] == 0:
-                    aresta = self.N[i]+"-"+self.N[j]
+                    aresta = self.N[i] + "-" + self.N[j]
                     not_adj.append(aresta)
         return not_adj
 
     def ha_laco(self):
         for i in range(len(self.M)):
-             if self.M[i][i] > 0:
-                 return True
+            if self.M[i][i] > 0:
+                return True
         return False
 
     def ha_paralelas(self):
@@ -250,11 +251,9 @@ class Grafo:
                     if self.N[i] == vertice and self.M[i][j] != '-'and i != j and self.M[i][j] > 0:
                         aresta = vertice+"-"+self.N[j]
                         sobre_vertice.append(aresta)
-
                     if self.N[j] == vertice and self.M[i][j] != '-' and i != j and self.M[i][j] > 0:
                         aresta = vertice+'-'+self.N[i]
                         sobre_vertice.append(aresta)
-
                     elif self.N[i] == vertice and self.M[i][j] != '-' and i == j and self.M[i][j] > 0:
                         aresta = vertice + '-' + self.N[i]
                         sobre_vertice.append(aresta)'''
@@ -267,18 +266,16 @@ class Grafo:
         for i in range(len(self.N)):
             if self.M[index][i] != '-' and self.M[index][i] > 0:
                 for j in range(self.M[index][i]):
-                    aresta = vertice+"-"+self.N[i]
+                    aresta = vertice + "-" + self.N[i]
                     sobre_vertice.append(aresta)
-
 
             if self.M[i][index] != '-' and self.M[i][index] > 0:
                 for j in range(self.M[i][index]):
                     aresta = vertice + "-" + self.N[i]
                     sobre_vertice.append(aresta)
 
-
-
         return sobre_vertice
+
     def eh_completo(self):
         completo = True
         for i in range(len(self.M)):
@@ -300,10 +297,58 @@ class Grafo:
                         soma += self.M[i][j]
         return soma
 
-        def prim(self):
-            pass
+    def prim(self, inicial):
+        verificado = []
+        conexoes = []
+        verificado.append(inicial)
+        aux = []
+        c = 0
+        while len(self.N) != len(verificado):
+            c += 1
+            for i in verificado:
+
+                for j in range(len(self.N)):
+                    if self.M[self.N.index(i)][j] == 1 and self.N[j] not in verificado:
+                        aresta = self.N[j] + "-" + i
+                        aux.append(aresta)
+                        ##print(self.M[self.N.index(i)][j])
+
+                    if self.M[j][self.N.index(i)] == 1 and self.N[j] not in verificado:
+                        ##print(self.M[j][self.N.index(i)])
+                        aresta = i + "-" + self.N[j]
+                        aux.append(aresta)
+            # print(aux)
+            menor_peso = 99999
+            lista_correta = []
+
+            for i in aux:
+                v1 = i[0]
+                v2 = i[2]
+                aresta_aux = v1 + "-" + v2
+                if self.M[self.N.index(aresta_aux[0])][self.N.index(aresta_aux[2])] == "-":
+                    aresta_aux = v2 + "-" + v1
+                lista_correta.append(aresta_aux)
+
+            for i in lista_correta:
+                if self.pesos[i] < menor_peso:
+                    menor_peso = self.pesos[i]
+            for i in lista_correta:
+                if self.pesos[i] == menor_peso:
+                    if i[0] not in verificado:
+                        verificado.append(i[0])
+                        conexoes.append(i[0]+"-"+i[2])
+                    elif i[0] in verificado and i[2] not in verificado:
+                        verificado.append(i[2])
+                        conexoes.append(i[2]+"-"+i[0])
+            aux = []
+            print(conexoes)
+
+        return conexoes
 
 
+        '''print(self.M[self.N.index(v1)][self.N.index(v2)])
+        print(self.M[self.N.index(v2)][self.N.index(v1)])
+        print(self.pesos[v2+'-'+v1])'''
 
     def __str__(self):
         '''
@@ -313,7 +358,7 @@ class Grafo:
         '''
 
         # Dá o espaçamento correto de acordo com o tamanho do string do maior vértice
-        espaco = ' '*(self.__maior_vertice)
+        espaco = ' ' * (self.__maior_vertice)
 
         grafo_str = espaco + ' '
 
@@ -331,34 +376,5 @@ class Grafo:
             grafo_str += '\n'
 
         return grafo_str
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
