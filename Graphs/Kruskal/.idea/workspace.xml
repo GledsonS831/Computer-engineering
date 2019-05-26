@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="85fe1751-302e-4d66-9aa4-22da87e97731" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testando.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prim/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Prim/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/proj_cities/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/proj_cities/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/proj_cities/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/proj_cities/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/proj_cities/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/proj_cities/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/proj_cities/proj_cities.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/proj_cities/proj_cities.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/proj_cities/src/main/java/br/edu/ifpb/CitiesProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/proj_cities/src/main/java/br/edu/ifpb/CitiesProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/proj_cities/src/main/java/br/edu/ifpb/ComparatorByZipCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/proj_cities/src/main/java/br/edu/ifpb/ComparatorByZipCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/proj_cities/target/classes/br/edu/ifpb/Aluno.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/proj_cities/target/classes/br/edu/ifpb/Aluno.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/proj_cities/target/classes/br/edu/ifpb/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/proj_cities/target/classes/br/edu/ifpb/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/proj_cities/target/classes/br/edu/ifpb/CitiesProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/proj_cities/target/classes/br/edu/ifpb/CitiesProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/proj_cities/target/classes/br/edu/ifpb/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/proj_cities/target/classes/br/edu/ifpb/City.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/proj_cities/target/classes/br/edu/ifpb/ComparadorPorCPF.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/proj_cities/target/classes/br/edu/ifpb/ComparadorPorCPF.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/proj_cities/target/classes/br/edu/ifpb/SetDemo$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/proj_cities/target/classes/br/edu/ifpb/SetDemo$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/proj_cities/target/classes/br/edu/ifpb/SetDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/proj_cities/target/classes/br/edu/ifpb/SetDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/proj_cities/target/classes/br/edu/ifpb/testando.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/proj_cities/target/classes/br/edu/ifpb/testando.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../POO/proj_cities/target/test-classes/br/edu/ifpb/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../POO/proj_cities/target/test-classes/br/edu/ifpb/AppTest.class" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testando.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="13" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grafo_adj_nao_dir.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="917">
+              <caret line="368" selection-start-line="368" selection-end-line="368" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grafo_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1856">
+              <caret line="245" column="79" selection-start-line="245" selection-start-column="79" selection-end-line="245" selection-end-column="79" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>g</find>
+      <find>self.</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>g5</replace>
+      <replace>g6</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/grafo_adj_nao_dir.py" />
+        <option value="$PROJECT_DIR$/Testando.py" />
+        <option value="$PROJECT_DIR$/grafo_test.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="734" />
+    <option name="height" value="867" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Kruskal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Kruskal" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python tests.Unittests for grafo_test.TestGrafo.test_kruskal">
+    <configuration name="Testando" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Kruskal" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Testando.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for grafo_test.TestGrafo.test_kruskal" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Kruskal" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;grafo_test.TestGrafo.test_kruskal&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests for grafo_test.TestGrafo.test_kruskal" />
+        <item itemvalue="Python.Testando" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="85fe1751-302e-4d66-9aa4-22da87e97731" name="Default Changelist" comment="" />
+      <created>1558822306108</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1558822306108</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_kruskal - 2019.05.25 at 21h 49m 32s.xml">
+      <configuration name="Unittests for grafo_test.TestGrafo.test_kruskal" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_kruskal - 2019.05.25 at 21h 52m 18s.xml">
+      <configuration name="Unittests for grafo_test.TestGrafo.test_kruskal" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_kruskal - 2019.05.25 at 21h 53m 34s.xml">
+      <configuration name="Unittests for grafo_test.TestGrafo.test_kruskal" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_kruskal - 2019.05.25 at 21h 59m 13s.xml">
+      <configuration name="Unittests for grafo_test.TestGrafo.test_kruskal" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_kruskal - 2019.05.25 at 21h 59m 24s.xml">
+      <configuration name="Unittests for grafo_test.TestGrafo.test_kruskal" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_kruskal - 2019.05.25 at 22h 09m 08s.xml">
+      <configuration name="Unittests for grafo_test.TestGrafo.test_kruskal" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_kruskal - 2019.05.25 at 22h 10m 38s.xml">
+      <configuration name="Unittests for grafo_test.TestGrafo.test_kruskal" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_kruskal - 2019.05.25 at 22h 10m 55s.xml">
+      <configuration name="Unittests for grafo_test.TestGrafo.test_kruskal" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_grafo_test_TestGrafo_test_kruskal - 2019.05.25 at 22h 11m 10s.xml">
+      <configuration name="Unittests for grafo_test.TestGrafo.test_kruskal" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496474" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32974428" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2496474" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Python Console" order="3" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32974428" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/grafo_adj_nao_dir.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="917">
+          <caret line="368" selection-start-line="368" selection-end-line="368" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testando.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="13" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grafo_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1856">
+          <caret line="245" column="79" selection-start-line="245" selection-start-column="79" selection-end-line="245" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
