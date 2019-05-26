@@ -297,58 +297,6 @@ class Grafo:
                         soma += self.M[i][j]
         return soma
 
-    def prim(self, inicial):
-        verificado = []
-        conexoes = []
-        verificado.append(inicial)
-        aux = []
-        c = 0
-        while len(self.N) != len(verificado):
-            c += 1
-            for i in verificado:
-
-                for j in range(len(self.N)):
-                    if self.M[self.N.index(i)][j] == 1 and self.N[j] not in verificado:
-                        aresta = self.N[j] + "-" + i
-                        aux.append(aresta)
-                        ##print(self.M[self.N.index(i)][j])
-
-                    if self.M[j][self.N.index(i)] == 1 and self.N[j] not in verificado:
-                        ##print(self.M[j][self.N.index(i)])
-                        aresta = i + "-" + self.N[j]
-                        aux.append(aresta)
-            # print(aux)
-            menor_peso = 99999
-            lista_correta = []
-
-            for i in aux:
-                v1 = i[0]
-                v2 = i[2]
-                aresta_aux = v1 + "-" + v2
-                if self.M[self.N.index(aresta_aux[0])][self.N.index(aresta_aux[2])] == "-":
-                    aresta_aux = v2 + "-" + v1
-                lista_correta.append(aresta_aux)
-
-            for i in lista_correta:
-                if self.pesos[i] < menor_peso:
-                    menor_peso = self.pesos[i]
-            for i in lista_correta:
-                if self.pesos[i] == menor_peso:
-                    if i[0] not in verificado:
-                        verificado.append(i[0])
-                        conexoes.append(i[0]+"-"+i[2])
-                    elif i[0] in verificado and i[2] not in verificado:
-                        verificado.append(i[2])
-                        conexoes.append(i[2]+"-"+i[0])
-            aux = []
-            print(conexoes)
-
-        return conexoes
-
-        '''print(self.M[self.N.index(v1)][self.N.index(v2)])
-        print(self.M[self.N.index(v2)][self.N.index(v1)])
-        print(self.pesos[v2+'-'+v1])'''
-
     def Kruskal(self):
         vertice_permanente = []
         arvore = []
