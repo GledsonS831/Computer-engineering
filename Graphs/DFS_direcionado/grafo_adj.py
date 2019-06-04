@@ -141,7 +141,8 @@ class Grafo:
         else:
             ArestaInvalidaException('A aresta ' + self.A[a] + ' é inválida')
 
-
+    def dfs(self, ini):
+        pass
 
     def __str__(self):
         '''

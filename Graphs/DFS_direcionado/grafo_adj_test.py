@@ -32,7 +32,6 @@ class TestGrafo(unittest.TestCase):
         self.g_c3 = Grafo([], [])
         self.g_c3.adiciona_vertice('J')
 
-    def dfs(self, ini):
-        pass
+
 
 
