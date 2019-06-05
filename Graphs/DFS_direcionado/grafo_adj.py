@@ -142,7 +142,50 @@ class Grafo:
             ArestaInvalidaException('A aresta ' + self.A[a] + ' é inválida')
 
     def dfs(self, ini):
-        pass
+        c = 0
+        i = ini
+        j = 0
+        floresta = []
+        arvore = []
+        retorno = [ini]
+        Max = len(self.N)
+
+        while True:
+            if self.M[i][j] != 0 and j not in retorno:
+                arvore.append([i, j])
+                retorno.append(j)
+                print(arvore)
+                i = j
+                j = 0
+            j += 1
+            c += 1
+            # print(j)
+
+            if j == Max:
+                for k in range(len(arvore) - 1, 0, -1):
+                    if arvore[k][1] == i:
+                        i = arvore[k][0]
+                        j = 0
+                        break
+
+            if j == Max:
+                for k in self.N:
+                   if k not in retorno:
+                        i = int(k)
+                        j = 0
+            if len(self.N) == len(retorno):
+                break
+
+        # for i in range(len(self.N) - 1):
+        #     for j in range(len(self.N) - 1):
+        #         if i == arvore[i][0] and j == arvore[i][1]:
+        #             pass
+        #         else:
+        #             self.M[i][j] = 0
+
+        print(arvore)
+        print(retorno)
+        #return self.M
 
     def __str__(self):
         '''
