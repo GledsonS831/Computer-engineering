@@ -154,7 +154,9 @@ class Grafo:
             if self.M[i][j] != 0 and j not in retorno:
                 arvore.append([i, j])
                 retorno.append(j)
-                print(arvore)
+                if i not in retorno:
+                    retorno.append(i)
+                #print(arvore)
                 i = j
                 j = 0
             j += 1
@@ -173,6 +175,7 @@ class Grafo:
                    if k not in retorno:
                         i = int(k)
                         j = 0
+            #print(retorno)
             if len(self.N) == len(retorno):
                 break
 
@@ -182,10 +185,12 @@ class Grafo:
         #             pass
         #         else:
         #             self.M[i][j] = 0
-
-        print(arvore)
-        print(retorno)
-        #return self.M
+        self.g_aux = Grafo([], [])
+        for i in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']:
+            self.g_aux.adiciona_vertice(i)
+        for k in arvore:
+            self.g_aux.M[k[0]][k[1]] = 1
+        return self.g_aux
 
     def __str__(self):
         '''

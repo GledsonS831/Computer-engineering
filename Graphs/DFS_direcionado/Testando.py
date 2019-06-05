@@ -26,6 +26,6 @@ g.adiciona_aresta('10-8')
 g.adiciona_aresta('12-7')
 g.adiciona_aresta('12-8')
 g.adiciona_aresta('12-11')
-# print(g)
-g.dfs(0)
+
+print(g.dfs(0))
 
