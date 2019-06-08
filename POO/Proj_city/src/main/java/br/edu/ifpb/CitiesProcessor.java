@@ -30,7 +30,8 @@ public class CitiesProcessor {
     }
 
     public void writeSetOfCitiesDestino(Path pathDestino, Comparator<City> comparator) throws IOException {
-        List<City> city = new LinkedList<>(citiesSet);
+        List<City> city = new LinkedList<>();
+        city.addAll(citiesSet);
         city.sort(comparator);
         List<String> listaFinal = new LinkedList<String>();
         for(City c: city){
