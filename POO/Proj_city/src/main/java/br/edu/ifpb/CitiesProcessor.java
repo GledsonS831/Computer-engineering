@@ -14,7 +14,7 @@ public class CitiesProcessor {
         List<String> linhas = Files.readAllLines(filepath, Charset.defaultCharset());
         for(int i = 0; i < linhas.size(); i++){
             City city = new City();
-            String []frase = linhas.get(i).split(",");
+            String []frase = linhas.get(i).split(", ");
             for(int j = 0; j < 3; j++){
                 city.setCities(frase[0]);
                 city.setState(frase[1]);
@@ -30,13 +30,12 @@ public class CitiesProcessor {
     }
 
     public void writeSetOfCitiesDestino(Path pathDestino, Comparator<City> comparator) throws IOException {
-        TreeSet<City> city = new TreeSet<City>(comparator);
-        city.addAll(citiesSet);
+        List<City> city = new LinkedList<>(citiesSet);
+        city.sort(comparator);
         List<String> listaFinal = new LinkedList<String>();
         for(City c: city){
             listaFinal.addAll(Collections.singleton(c.toString()));
         }
-        Collections.sort(listaFinal);
         Files.write(pathDestino, listaFinal, Charset.defaultCharset());
     }
 }
