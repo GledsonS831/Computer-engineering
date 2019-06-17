@@ -1,8 +1,6 @@
 import unittest
 from grafo_adj import *
 
-
-
 class TestGrafo(unittest.TestCase):
 
     def setUp(self):
@@ -124,16 +122,21 @@ class TestGrafo(unittest.TestCase):
             self.n.adiciona_aresta(i)
         self.carga = ['a']
 
-        def test_dijkstra(self):
-            self.assertEqual(self.g_challenger.dijkstra(3, 5,self.lista_carga, 'A','S'), ['S', '3', '6', '7', 'U', 'T', '5', 'R', 'Q', 'M', 'L', 'E', 'D', 'A'])
-            self.assertEqual(self.c2.dijkstra(2,2,self.r,'h','d'), ['d', 'e', 'g', 'f', 'h'])
-            self.assertEqual(self.n(4,4,self.carga,'a','e'), ['e', 'd', 'c', 'b', 'a'])
-            self.assertEqual(self.g_16.dijkstra(2, 3, self.carga_g16, 'a', 'e'), ['e', 'b', 'a'])
-            self.assertEqual(self.g_18.dijkstra(2, 3, self.carga18,'a', 'e'), ['e', 'b', 'a'])
-            self.assertEqual(self.g_c.dijkstra(3, 3, self.carga_c, 'E', 'J'), ['J', 'E'])
-            self.assertEqual(self.g_challenger.dijkstra(5, 5, self.lista_carga, 'A', 'S'),
+    def test_dijkstra(self):
+        self.assertEqual(self.g_challenger.dijkstra(3, 5, self.lista_carga, 'A', 'S'),
                              ['S', '3', '6', '7', 'U', 'T', '5', 'R', 'Q', 'M', 'L', 'E', 'D', 'A'])
-            self.assertEqual(self.g_p_sem_paralelas(2, 2, self.carga_gp, 'C', 'Z', ['Z', 'T', 'C']))
+        self.assertEqual(self.c2.dijkstra(2, 2, self.r, 'h', 'd'), ['d', 'e', 'g', 'f', 'h'])
+        self.assertEqual(self.n(4, 4, self.carga, 'a', 'e'), ['e', 'd', 'c', 'b', 'a'])
+        self.assertEqual(self.g_16.dijkstra(2, 3, self.carga_g16, 'a', 'e'), ['e', 'b', 'a'])
+        self.assertEqual(self.g_18.dijkstra(2, 3, self.carga18, 'a', 'e'), ['e', 'b', 'a'])
+        self.assertEqual(self.g_c.dijkstra(3, 3, self.carga_c, 'E', 'J'), ['J', 'E'])
+        self.assertEqual(self.g_challenger.dijkstra(5, 5, self.lista_carga, 'A', 'S'),
+                             ['S', '3', '6', '7', 'U', 'T', '5', 'R', 'Q', 'M', 'L', 'E', 'D', 'A'])
+        self.assertEqual(self.g_p_sem_paralelas(2, 2, self.carga_gp, 'C', 'Z', ['Z', 'T', 'C']))
+
+
+
+
 
 
 
