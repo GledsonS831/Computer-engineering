@@ -142,47 +142,6 @@ class Grafo:
         else:
             ArestaInvalidaException('A aresta ' + self.A[a] + ' é inválida')
 
-    # def khan(self, u):
-    #     topologica = []
-    #     inicial = u
-    #     verifica = {}
-    #     for i in self.N:
-    #         verifica[i] = 1
-    #     tam = len(self.N)
-    #     c = 0
-    #     while len(topologica) != tam:
-    #         nao_pode = 0
-    #         tem = 0
-    #         for i in range(tam):
-    #             if self.M[self.N.index(u)][i] == 1 and verifica[u] == 1:
-    #                 tem = 1
-    #                 for j in range(tam):
-    #                     if self.M[j][self.N.index(u)] == 1:
-    #                         nao_pode = 1
-    #                 if nao_pode == 0:
-    #                     topologica.append(u)
-    #                     count = 0
-    #                     for k in range(tam):
-    #                         self.M[k][i] = 0
-    #                     u = self.N[i]
-    #                     break
-    #
-    #         if not tem and verifica[u] ==1:
-    #             verifica[u] = 0
-    #             topologica.append(u)
-    #
-    #             t = len(topologica)
-    #             while verifica[u] == 0:
-    #                 t-=1
-    #                 if t == -1:
-    #                     break
-    #                 u = self.N[t]
-    #
-    #         if u == inicial:
-    #             print(topologica)
-    #             break
-    # def algo(self):
-    #     pass
     def eh_fonte(self, index):
         eh = 1
         for i in range(len(self.N)):
