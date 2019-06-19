@@ -190,7 +190,8 @@ class Grafo:
             self.g_aux.adiciona_vertice(i)
         for k in arvore:
             self.g_aux.M[k[0]][k[1]] = 1
-        return self.g_aux
+        print(retorno)
+        return retorno
 
     def __str__(self):
         '''
