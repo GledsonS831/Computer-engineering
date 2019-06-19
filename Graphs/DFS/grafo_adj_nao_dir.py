@@ -266,7 +266,6 @@ class Grafo:
                     if self.M[i][j] != '-':
                         self.M[i][j] = 0
 
-        print(retorno)
         return retorno
         #return self.M
 
