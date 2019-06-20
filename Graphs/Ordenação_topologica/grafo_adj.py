@@ -169,7 +169,56 @@ class Grafo:
                             self.M[i][j] = 0
                     break
 
-        print(topologica)
+        return topologica
+
+
+
+    def back(self, index, tam):
+        for i in range(tam):
+            if self.M[i][index] == 1:
+                return i
+        return -1
+    def dfs(self, u):
+        topologica = []
+        tam = len(self.N)
+        permanente = {}
+        for i in range(tam):
+            permanente[self.N[i]] = 0
+        index = self.N.index(u)
+        c = 0
+        while True:
+            tem = 0
+
+            for i in range(tam):
+                if self.M[index][i] == 1 and permanente[self.N[i]] == 0:
+
+                    tem = 1
+                    index = i
+                    break
+            if not tem:
+                topologica.append(self.N[index])
+                permanente[self.N[index]] = 1
+                index = self.back(index, tam)
+                if index != -1:
+                    tem = 1
+
+            if not tem:
+                for i in permanente:
+                    if permanente[i] == 0:
+                        index = self.N.index(i)
+                        tem = 1
+                        break
+
+            if not tem:
+                break
+            # c+=1
+            #
+            # if c==12:
+            #     print(permanente)
+            #     print(topologica)
+            #     break
+        # print(topologica)
+        return topologica
     def __str__(self):
         '''
         Fornece uma representação do tipo String do grafo.
