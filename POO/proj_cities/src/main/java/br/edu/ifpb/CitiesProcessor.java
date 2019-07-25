@@ -2,56 +2,40 @@ package br.edu.ifpb;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
 import java.util.*;
 
 public class CitiesProcessor {
-    public Set<City> citiesSet;
+    private Set<City> citiesSet = new TreeSet<City>();
 
-    public void setCities(Set<City> cititesSet){
-        this.citiesSet = cititesSet;
-    }
-
-    public TreeSet<City> buildSetOfCities(Path filePath){
-        List<String> lista;
-        City city;
-        String[] palavra;
-        int cod;
-        TreeSet<City> citiesNoDuplicatas = new TreeSet<>();
-        try{
-            lista = Files.readAllLines(filePath, Charset.defaultCharset());
-            for(int i = 0; i < lista.size(); i++){
-                palavra = lista.get(i).split(", ");
-                city = new City();
-                city.setName(palavra[0]);
-                city.setState(palavra[1]);
-                cod = Integer.parseInt(palavra[2]);
-                city.setCod(cod);
-                citiesNoDuplicatas.add(city);
+    public TreeSet<City> buildSetOfCities(Path filepath) throws IOException {
+        TreeSet<City> listaCity = new TreeSet<City>();
+        List<String> linhas = Files.readAllLines(filepath, Charset.defaultCharset());
+        for(int i = 0; i < linhas.size(); i++){
+            City city = new City();
+            String []frase = linhas.get(i).split(", ");
+            for(int j = 0; j < 3; j++){
+                city.setCities(frase[0]);
+                city.setState(frase[1]);
+                int n = Integer.parseInt(frase[2]);
+                city.setCode(n);
             }
+            listaCity.add(city);
         }
-        catch (IOException e){
-            System.out.println("Erro");
-        }
-
-        return citiesNoDuplicatas;
+        return listaCity;
     }
-    public void writeSetOfCities(Path pathDestino, Comparator<City> comparator){
-        List<City> listCity = new LinkedList<>(citiesSet);
-        listCity.sort(comparator);
-        List<String> lista = new LinkedList<>();
-        for(int i = 0; i < listCity.size(); i++){
-            lista.add(listCity.get(i).toString());
-        }
-        try{
-            Files.write(pathDestino, lista, Charset.defaultCharset(), StandardOpenOption.CREATE);
-        }
-        catch (IOException e){
-            System.out.println("erro");
-        }
+    public void setCitiesSet(Set<City> city){
+        this.citiesSet = city;
     }
 
+    public void writeSetOfCitiesDestino(Path pathDestino, Comparator<City> comparator) throws IOException {
+        List<City> city = new LinkedList<>(citiesSet);
+        city.sort(comparator);
+        List<String> listaFinal = new LinkedList<String>();
+        for(City c: city){
+            listaFinal.addAll(Collections.singleton(c.toString()));
+        }
+        Files.write(pathDestino, listaFinal, Charset.defaultCharset());
+    }
 }

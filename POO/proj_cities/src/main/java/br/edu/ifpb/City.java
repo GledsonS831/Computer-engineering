@@ -1,47 +1,37 @@
 package br.edu.ifpb;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.List;
-import java.util.TreeSet;
-
-public class City implements Comparable<City> {
-    private int cod;
-    private String state;
-    private String name;
-
-    public void setName(String name){this.name = name;}
-    public String getName(){ return this.name;}
-
-    public void setCod(int cod){this.cod = cod;}
-    public int getCod(){return this.cod;}
-
-    public void setState(String state){this.state = state;}
-    public String getState(){return this.state;}
+public class City implements Comparable<City>{
+    private String Cities;
+    private String State;
+    private int Code;
 
     @Override
-    public int compareTo(City city) {
-        return this.getName().compareTo(city.getName());
+    public boolean equals(Object obj) {
+        if(this == obj) return true;
+        if(this.getClass() != obj.getClass() || obj == null) return false;
+        City c =  (City) obj;
+        return Cities == c.Cities;
     }
 
     @Override
-    public boolean equals(Object o){
-        if(o.getClass() != getClass() || o == null){
-            return false;
-        }
-        if(this == o) {return true;}
-        if(this.hashCode() - o.hashCode() == 0){return true;}
-        return false;
+    public int hashCode() {
+        return this.Cities.charAt(0);
     }
 
     @Override
-    public int hashCode(){
-        return this.getName().charAt(0);
+    public int compareTo(City o) {
+        return this.getCities().compareTo(o.getCities());
     }
 
     @Override
-    public String  toString(){
-        return getName()+ ", " + getState() + ", " + getCod();
+    public String toString() {
+        return this.Cities+","+this.State+","+this.Code;
     }
+    public void setCities(String c){this.Cities = c;}
+    public void setState(String s){this.State = s;}
+    public void setCode(int code){this.Code = code;}
+
+    public String getCities() {return Cities;}
+    public String getState(){return State;}
+    public int getCode(){return Code;}
 }

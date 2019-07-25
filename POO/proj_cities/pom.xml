@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>br.edu.ifpb</groupId>
-  <artifactId>proj_cities</artifactId>
+  <artifactId>Proj_Cities</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>proj_cities</name>
+  <name>Proj_Cities</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 

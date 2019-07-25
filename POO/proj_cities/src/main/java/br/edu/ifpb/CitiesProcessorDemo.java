@@ -1,23 +1,29 @@
 package br.edu.ifpb;
 
+import java.io.IOException;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Comparator;
 import java.util.Set;
 
-public class CitiesProcessorDemo {
-    public static void main(String[] args){
+public class CitiesProcessorDemo
+{
+    public static void main( String[] args ) throws IOException
+    {
         CitiesProcessor cp = new CitiesProcessor();
-        Set<City> set = cp.buildSetOfCities(Path.of("C:\\Users\\Gledson\\Documents\\Texto\\Cieties_duplicatas2.txt"));
+        //Path or = Paths.get("C://Users//Gledson//Documents//Texto//Cieties_duplicatas.txt");
+        //Path des = Paths.get("C:\\Users\\Gledson\\Documents\\Texto\\resp//Cities_ordered_by_name.txt");
+        //Path des2 = Paths.get("C:\\Users\\Gledson\\Documents\\Texto\\resp//Cities_ordered_by_zipCode.txt");
+        //Path des3 = Paths.get("C:\\Users\\Gledson\\Documents\\Texto\\resp//Cities_ordered_by_state.txt");
+        Set<City> set = cp.buildSetOfCities(Path.of("C://Users//Gledson//Documents//Texto//Cieties_duplicatas.txt"));
+        cp.setCitiesSet(set);
+        cp.writeSetOfCitiesDestino(Path.of("C:\\Users\\Gledson\\Documents\\Texto\\resp//Cities_ordered_by_name.txt"), Comparator.naturalOrder());
 
-        cp.setCities(set);
-        cp.writeSetOfCities(Path.of("C:\\Users\\Gledson\\Documents\\Texto\\Cities_por_name.txt"), Comparator.naturalOrder());
+        ComparatorByZipCode comparadorZip = new ComparatorByZipCode();
+        cp.writeSetOfCitiesDestino(Path.of("C:\\Users\\Gledson\\Documents\\Texto\\resp//Cities_ordered_by_zipCode.txt"), comparadorZip);
 
-        ComparatorByZipCode comparatorZip = new ComparatorByZipCode();
-        cp.writeSetOfCities(Path.of("C:\\Users\\Gledson\\Documents\\Texto\\Cities_por_ZipCode.txt"), comparatorZip);
-
-        ComparatorByState comparatorState = new ComparatorByState();
-        cp.writeSetOfCities(Path.of("C:\\Users\\Gledson\\Documents\\Texto\\Cities_por_State.txt"), comparatorState);
-
+        ComparatorByState comparadorState = new ComparatorByState();
+        cp.writeSetOfCitiesDestino(Path.of("C:\\Users\\Gledson\\Documents\\Texto\\resp//Cities_ordered_by_state.txt"), comparadorState);
 
     }
 }
