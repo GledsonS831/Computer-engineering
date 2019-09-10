@@ -12,5 +12,21 @@ public class UsaEmpresa {
                 f.setSalario(f.getSalario() + f.getSalario()*0.01);
             }
         }
+        emp.setLd(trab);
+        emp.setLd(Limpeza);
+        for(Funcionario i: trab.getLista_funcionario()){
+            System.out.println(i.toString());
+        }
+        emp.transfere_funcionario(trab.getLista_funcionario().get(1), trab, Limpeza);
+        System.out.println();
+        for(Funcionario i: trab.getLista_funcionario()){
+            System.out.println(i.toString());
+        }
+        System.out.println();
+        for(Funcionario i: Limpeza.getLista_funcionario()){
+            System.out.println(i.toString());
+        }
+
+
     }
 }
